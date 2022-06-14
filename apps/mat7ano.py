@@ -6,6 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
@@ -24,6 +25,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF07MA29"),dbc.CardBody(children=[] , id='EF07MA29', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA29')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total7",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA19,
+            target="EF07MA19",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA21,
+            target="EF07MA21",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA29,
+            target="EF07MA29",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -33,6 +54,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF07MA20"),dbc.CardBody(children=[] , id='EF07MA20', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA20')),
             ]
     ),
+    dbc.Popover(
+            EF07MA13,
+            target="EF07MA13",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA15,
+            target="EF07MA15",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA04,
+            target="EF07MA04",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA20,
+            target="EF07MA20",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -43,7 +84,22 @@ layout = html.Div(children=[
             ]
     ),
 
-
+    dbc.Popover(
+            EF07MA03,
+            target="EF07MA03",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA36,
+            target="EF07MA36",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF07MA01,
+            target="EF07MA01",
+            body=True,
+            trigger="hover"),
+    html.Br(),
 
 ])
 

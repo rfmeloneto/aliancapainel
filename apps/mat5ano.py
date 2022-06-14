@@ -6,6 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
@@ -24,6 +25,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF05MA04"),dbc.CardBody(children=[] , id='EF05MA04', style={'font-size':30, 'margin':'auto'})], id='cardEF05MA04')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total5",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA01,
+            target="EF05MA01",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA05,
+            target="EF05MA05",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA04,
+            target="EF05MA04",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -33,6 +54,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF05MA19"),dbc.CardBody(children=[] , id='EF05MA19', style={'font-size':30, 'margin':'auto'})], id='cardEF05MA19')),
             ]
     ),
+    dbc.Popover(
+            EF05MA11,
+            target="EF05MA11",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA17,
+            target="EF05MA17",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA10,
+            target="EF05MA10",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA19,
+            target="EF05MA19",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -43,6 +84,17 @@ layout = html.Div(children=[
             
             ]
     ),
+    dbc.Popover(
+            EF05MA24,
+            target="EF05MA24",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF05MA25,
+            target="EF05MA25",
+            body=True,
+            trigger="hover"),
+    html.Br(),
 
 
 ])

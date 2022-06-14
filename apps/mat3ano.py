@@ -6,6 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
@@ -24,6 +25,29 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF03MA05"),dbc.CardBody(children=[] , id='EF03MA05', style={'font-size':30, 'margin':'auto'})], id='cardEF03MA05')),
             ]
     ),
+
+    dbc.Popover(
+            totalgeral,
+            target="total3",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA01,
+            target="EF03MA01",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA02,
+            target="EF03MA02",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA05,
+            target="EF03MA05",
+            body=True,
+            trigger="hover"),
+
+
     html.Br(),
     dbc.Row(
             children=[
@@ -34,6 +58,28 @@ layout = html.Div(children=[
             ]
     ),
     html.Br(),
+
+    dbc.Popover(
+            EF03MA07,
+            target="EF03MA07",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA18,
+            target="EF03MA18",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA10,
+            target="EF03MA10",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF03MA15,
+            target="EF03MA15",
+            body=True,
+            trigger="hover"),
+
     dbc.Row(
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF03MA17"),dbc.CardBody(children=[] , id='EF03MA17', style={'font-size':30, 'margin':'auto'})], id='cardEF03MA17'), width=3),
@@ -42,6 +88,14 @@ layout = html.Div(children=[
             
             ]
     ),
+
+    dbc.Popover(
+            EF03MA17,
+            target="EF03MA17",
+            body=True,
+            trigger="hover"),
+
+    html.Br(),
 
 
 ])

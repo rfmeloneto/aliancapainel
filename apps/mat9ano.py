@@ -6,6 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
@@ -24,6 +25,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF09MA17"),dbc.CardBody(children=[] , id='EF09MA17', style={'font-size':30, 'margin':'auto'})], id='cardEF09MA17')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total9",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA03,
+            target="EF09MA03",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA03bTO,
+            target="EF09MA03bTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA17,
+            target="EF09MA17",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -33,6 +54,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF09MA02aTO"),dbc.CardBody(children=[] , id='EF09MA02aTO', style={'font-size':30, 'margin':'auto'})], id='cardEF09MA02aTO')),
             ]
     ),
+    dbc.Popover(
+            EF09MA23aTO,
+            target="EF09MA23aTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA03aTO,
+            target="EF09MA03aTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA02,
+            target="EF09MA02",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA02aTO,
+            target="EF09MA02aTO",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -43,6 +84,26 @@ layout = html.Div(children=[
             
             ]
     ),
+    dbc.Popover(
+            EF09MA01bTO,
+            target="EF09MA01bTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA09aTO,
+            target="EF09MA09aTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA23bTO,
+            target="EF09MA23bTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA04,
+            target="EF09MA04",
+            body=True,
+            trigger="hover"),
 
     html.Br(),
     dbc.Row(
@@ -53,6 +114,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF09MA09"),dbc.CardBody(children=[] , id='EF09MA09', style={'font-size':30, 'margin':'auto'})], id='cardEF09MA09')),
             ]
     ),
+    dbc.Popover(
+            EF09MA09bTO,
+            target="EF09MA09bTO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA10,
+            target="EF09MA10",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA23,
+            target="EF09MA23",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF09MA09,
+            target="EF09MA09",
+            body=True,
+            trigger="hover"),
 
 
     html.Br(),

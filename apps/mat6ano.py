@@ -6,7 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
-
+from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
@@ -24,6 +24,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF06MA03"),dbc.CardBody(children=[] , id='EF06MA03', style={'font-size':30, 'margin':'auto'})], id='cardEF06MA03')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total6",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA01,
+            target="EF06MA01",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA06,
+            target="EF06MA06",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA03,
+            target="EF06MA03",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -33,6 +53,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF06MA33"),dbc.CardBody(children=[] , id='EF06MA33', style={'font-size':30, 'margin':'auto'})], id='cardEF06MA33')),
             ]
     ),
+    dbc.Popover(
+            EF06MA20,
+            target="EF06MA20",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA19,
+            target="EF06MA19",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA25,
+            target="EF06MA25",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA33,
+            target="EF06MA33",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -44,6 +84,27 @@ layout = html.Div(children=[
             ]
     ),
 
+    dbc.Popover(
+            EF06MA18,
+            target="EF06MA18",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA14,
+            target="EF06MA14",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA05,
+            target="EF06MA05",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06MA26,
+            target="EF06MA26",
+            body=True,
+            trigger="hover"),
+
     html.Br(),
     dbc.Row(
             children=[
@@ -52,7 +113,13 @@ layout = html.Div(children=[
             
             ]
     ),
-
+    dbc.Popover(
+            EF06MA04,
+            target="EF06MA04",
+            body=True,
+            trigger="hover"),
+    
+    html.Br(),
 
 ])
 

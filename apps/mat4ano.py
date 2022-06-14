@@ -6,6 +6,7 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
@@ -24,6 +25,27 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF04MA08"),dbc.CardBody(children=[] , id='EF04MA08', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA08')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total4",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA01TO,
+            target="EF04MA01TO",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA02,
+            target="EF04MA02",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA08,
+            target="EF04MA08",
+            body=True,
+            trigger="hover"),
+
     html.Br(),
     dbc.Row(
             children=[
@@ -34,6 +56,26 @@ layout = html.Div(children=[
             ]
     ),
     html.Br(),
+    dbc.Popover(
+            EF04MA27,
+            target="EF04MA27",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA17,
+            target="EF04MA17",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA22,
+            target="EF04MA22",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA01,
+            target="EF04MA01",
+            body=True,
+            trigger="hover"),
     dbc.Row(
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF04MA20"),dbc.CardBody(children=[] , id='EF04MA20', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA20'), width=3),
@@ -44,6 +86,17 @@ layout = html.Div(children=[
             ]
     ),
 
+    dbc.Popover(
+            EF04MA20,
+            target="EF04MA20",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF04MA13,
+            target="EF04MA13",
+            body=True,
+            trigger="hover"),
+    html.Br(),
 
 ])
 

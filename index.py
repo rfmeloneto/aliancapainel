@@ -50,7 +50,7 @@ dbc.NavbarSimple(
 
 html.Div(
     [
-        dbc.Button("Séries", id="open-offcanvas", n_clicks=0, style={'margin-top':3,'margin-left':10, 'width':200}),
+       dbc.Row( children =[ dbc.Col([dbc.Button("Séries", id="open-offcanvas", n_clicks=0, style={'margin-top':3,'margin-left':10, 'width':200})]),dbc.Col([html.H1(children=[], id='titulo', style={'margin-left':150})], width=9)]),
         dbc.Offcanvas(
             children=[
 
@@ -72,46 +72,47 @@ html.Div(
 
 
 @app.callback(Output('page-content', 'children'),
+              Output('titulo', 'children'),
               [Input('url', 'pathname')])
 
 def display_page(pathname):
     
     if pathname == '/apps/mat1ano':
-        return mat1ano.layout
+        return mat1ano.layout, 'Matemática 1 Ano'
     if pathname == '/apps/mat2ano':
-        return mat2ano.layout
+        return mat2ano.layout, 'Matemática 2 Ano'
     if pathname == '/apps/mat3ano':
-        return mat3ano.layout
+        return mat3ano.layout, 'Matemática 3 Ano'
     if pathname == '/apps/mat4ano':
-        return mat4ano.layout
+        return mat4ano.layout, 'Matemática 4 Ano'
     if pathname == '/apps/mat5ano':
-        return mat5ano.layout
+        return mat5ano.layout, 'Matemática 5 Ano'
     if pathname == '/apps/mat6ano':
-        return mat6ano.layout
+        return mat6ano.layout, 'Matemática 6 Ano'
     if pathname == '/apps/mat7ano':
-        return mat7ano.layout
+        return mat7ano.layout, 'Matemática 7 Ano'
     if pathname == '/apps/mat8ano':
-        return mat8ano.layout
+        return mat8ano.layout, 'Matemática 8 Ano'
     if pathname == '/apps/mat9ano':
-        return mat9ano.layout
+        return mat9ano.layout, 'Matemática 9 Ano'
     if pathname == '/apps/port1ano':
-        return port1ano.layout
+        return port1ano.layout, 'Português 1 Ano'
     if pathname == '/apps/port2ano':
-        return port2ano.layout
+        return port2ano.layout, 'Português 2 Ano'
     if pathname == '/apps/port3ano':
-        return port3ano.layout
+        return port3ano.layout, 'Português 3 Ano'
     if pathname == '/apps/port4ano':
-        return port4ano.layout
+        return port4ano.layout, 'Português 4 Ano'
     if pathname == '/apps/port5ano':
-        return port5ano.layout
+        return port5ano.layout, 'Português 5 Ano'
     if pathname == '/apps/port6ano':
-        return port6ano.layout
+        return port6ano.layout, 'Português 6 Ano'
     if pathname == '/apps/port7ano':
-        return port7ano.layout
+        return port7ano.layout, 'Português 7 Ano'
     if pathname == '/apps/port8ano':
-        return port8ano.layout
+        return port8ano.layout, 'Português 8 Ano'
     if pathname == '/apps/port9ano':
-        return port9ano.layout
+        return port9ano.layout, 'Português 9 Ano'
     else:
         return mat1ano.layout
 
