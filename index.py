@@ -114,7 +114,7 @@ def display_page(pathname):
     if pathname == '/apps/port9ano':
         return port9ano.layout, 'Português 9 Ano'
     else:
-        return mat1ano.layout
+        return mat1ano.layout, 'Matemática 1 Ano'
 
 
 @app.callback(
