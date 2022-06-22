@@ -10,7 +10,8 @@ from app import app
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_port1ano = pd.read_csv(DATA_PATH.joinpath("port1ano.csv")) 
+df_port1ano = pd.read_csv(DATA_PATH.joinpath("port1ano.csv"))
+ 
 
 layout = html.Div(children=[
     

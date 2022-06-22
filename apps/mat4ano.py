@@ -11,7 +11,8 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_mat4ano = pd.read_csv(DATA_PATH.joinpath("mat4ano.csv"))  
+df_mat4ano = pd.read_csv(DATA_PATH.joinpath("mat4ano.csv"))
+df_habs4= df_mat4ano.drop(columns=['Escola','Estudante','Ano','Turma','Total'])  
 
 layout = html.Div(children=[
     
@@ -97,6 +98,19 @@ layout = html.Div(children=[
             body=True,
             trigger="hover"),
     html.Br(),
+ dbc.Row(children=[
+
+    dbc.Col(dcc.Dropdown(df_mat4ano['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma4')),
+    dbc.Col(dcc.Dropdown(df_habs4.columns, value="EF04MA13", style ={'margin-top':10, 'margin-left':5}, id='drop-hab4')),
+    
+]),
+
+html.Br(),
+dbc.Row(children=[
+
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs4',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto4',config= {'displaylogo': False}))),
+])
 
 ])
 
@@ -309,5 +323,35 @@ def hab10(turma):
         return str(media) , 'warning'
     else:
         return str(media), 'danger'
+
+#-----------------------------------------------------------------
+@app.callback(
+    Output('figacerto4','figure'),
+    Input('drop-hab4','value'),
+    Input('drop-turma4','value'),
+)
+def acertos(hab, turma):
+    d = df_mat4ano.loc[df_mat4ano['Turma']==turma]
+    dff= d[hab]
+    acerto = 0
+    erro = 0
+    for i in dff:
+        if i > 0:
+            acerto= acerto+1
+        else:
+            erro = erro +1
+    fig= px.pie( values=[acerto, erro], names = {acerto:'Acerto', erro:'Erro'}, color={'Acerto':'#0000ff','Erro':'#ff0000'}, title='Percentual de Acertos e Erros na Habilidade '+str(hab)+' na turma '+str(turma).upper())
+    return fig
+
+@app.callback(
+    Output('fighabs4','figure'),
+    Input('drop-turma4','value'),
+)
+def habs(turma):
+    df = df_mat4ano.loc[df_mat4ano['Turma']==turma]
+    fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Nota Geral'}, title= 'Nota Geral por Quantidade de Estudante'+' na turma '+str(turma).upper())
+    fig.update_layout(showlegend=False)
+    fig.update_yaxes( title= 'Quantidade de Estudantes')
+    return fig
 
 

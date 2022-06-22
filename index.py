@@ -10,7 +10,6 @@ from app import server
 
 # Connect to your app pages
 from apps import mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano, mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano, port4ano, port5ano, port6ano, port7ano, port8ano, port9ano
-
 button = html.Div(
     [
         dbc.Button('Matemática 1 Ano', href='/apps/mat1ano', outline=True, className="me-1",color="primary"),
@@ -128,4 +127,4 @@ def toggle_offcanvas(n1, is_open):
     return is_open
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)
