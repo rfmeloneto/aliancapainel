@@ -430,7 +430,7 @@ def acertos(hab, turma):
             acerto= acerto+1
         else:
             erro = erro +1
-    fig= px.pie( values=[acerto, erro], names = {acerto:'Acerto', erro:'Erro'}, color={'Acerto':'#0000ff','Erro':'#ff0000'}, title='Percentual de Acertos e Erros na Habilidade '+str(hab)+' na turma '+str(turma).upper())
+    fig= px.pie( values=[acerto, erro], names = {acerto:'Apresentaram Domínio Mínimo', erro:'Não Apresentaram Domínio Mínimo'}, color={'Apresentaram Domínio Mínimo':'#0000ff','Não Apresentaram Domínio Mínimo':'#ff0000'}, title='Percentual de estudantes que mostraram <br> pelo menos domínio mínimo na habilidade '+str(hab)+' na turma '+str(turma).upper())
     return fig
 
 @app.callback(
@@ -439,7 +439,7 @@ def acertos(hab, turma):
 )
 def habs(turma):
     df = df_mat6ano.loc[df_mat6ano['Turma']==turma]
-    fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Nota Geral'}, title= 'Nota Geral por Quantidade de Estudante'+' na turma '+str(turma).upper())
+    fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
     fig.update_layout(showlegend=False)
     fig.update_yaxes( title= 'Quantidade de Estudantes')
     return fig

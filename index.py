@@ -1,4 +1,5 @@
 
+from turtle import color
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
@@ -38,13 +39,25 @@ app.layout = html.Div([
     
 dcc.Location(id='url', refresh=False),
 
-dbc.NavbarSimple(
-    children=[html.Img(src=app.get_asset_url('alian.png'), style ={'height': 150})],         
-    brand="Mapa de Habilidades BNCC - Aliança do Tocantins",
-    color="primary",
-    dark=True,
-    brand_style={'font-size':35},
-    className="shadow p-3 mb-5"
+#dbc.NavbarSimple(
+#    children=[html.Img(src=app.get_asset_url('alian.png'), style ={'height': 150})],         
+#    brand="Mapa de Habilidades BNCC - Aliança do Tocantins",
+#    color="primary",
+#    dark=True,
+#    brand_style={'font-size':35},
+#    className="shadow p-3 mb-5"
+#),
+
+html.Div(
+    dbc.Container(
+        [
+
+        ],
+        fluid=True,
+        className="py-3",
+        
+    ),
+    className="p-5 bg-light rounded-3",style={'background-image': 'url("assets/Top-V2-Mapa-de-Habilidades-BNCC-Aliança.png")','background-size': 'cover','background-repeat': 'no-repeat'}
 ),
 
 html.Div(
@@ -59,13 +72,14 @@ html.Div(
             id="offcanvas",
             title="Secretaria de Educação de Aliança do Do Tocantins",
             is_open=False,
+            style= {'background-color': '#cbe0f0'}
         ),
-    ]
+    ],
 ),
      
   html.Div(id='page-content', children=[])
 
-], style={'background-color': '#D6EAF8'})
+],style={'background-image': 'url("/assets/Bg-Mapa-de-Habilidades-BNCC-Aliança.png")','background-size': 'contain'})
 
 
 
