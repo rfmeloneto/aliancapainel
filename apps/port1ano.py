@@ -6,11 +6,12 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
-
+from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port1ano = pd.read_csv(DATA_PATH.joinpath("port1ano.csv"))
+df_habsport1 = df_port1ano.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
  
 
 layout = html.Div(children=[
@@ -19,6 +20,7 @@ layout = html.Div(children=[
         dbc.Col(dcc.Dropdown(df_port1ano['Escola'].unique(), value='Duque de Caxias', style ={'margin-top':10, 'margin-left':5}, id='escola2',), width=2), 
         dbc.Col(dcc.Dropdown(df_port1ano['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down20',), width=2)
         ]),
+        
     html.Br(),
     dbc.Row(
             children=[
@@ -28,6 +30,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF12LP04"),dbc.CardBody(children=[] , id='EF12LP04', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP04')),
             ]
     ),
+    dbc.Popover(
+            totalgeral,
+            target="total20",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01LP20,
+            target="EF01LP20",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF12LP10,
+            target="EF12LP10",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF12LP04,
+            target="EF12LP04",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -37,6 +59,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF01LP16"),dbc.CardBody(children=[] , id='EF01LP16', style={'font-size':30, 'margin':'auto'})], id='cardEF01LP16')),
             ]
     ),
+    dbc.Popover(
+            EF01LP03,
+            target="EF01LP03",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01LP05,
+            target="EF01LP05",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01LP08,
+            target="EF01LP08",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01LP16,
+            target="EF01LP16",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -47,6 +89,41 @@ layout = html.Div(children=[
             
             ]
     ),
+
+    dbc.Popover(
+            EF01LP01,
+            target="EF01LP01",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+           EF01LP06,
+            target="EF01LP06",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF12LP07,
+            target="EF12LP073",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF15LP15,
+            target="EF15LP153",
+            body=True,
+            trigger="hover"),
+ html.Br(),
+     dbc.Row(children=[
+    dbc.Col(dcc.Dropdown(df_port1ano['Escola'].unique(), value="Duque de Caxias", style ={'margin-top':10, 'margin-left':5}, id='drop-escola10')),    
+    dbc.Col(dcc.Dropdown(df_port1ano['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma10')),
+    dbc.Col(dcc.Dropdown(df_habsport1.columns, value="EF15LP15", style ={'margin-top':10, 'margin-left':5}, id='drop-hab10')),
+    ]),
+
+    html.Br(),
+    dbc.Row(children=[
+
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs10',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto10',config= {'displaylogo': False}))),
+
+])
 
 
 ])
@@ -334,4 +411,37 @@ def hab10(escola,turma):
 
 
 #-----------------------------------------------------------------
+@app.callback(
+    Output('figacerto10','figure'),
+    Input('drop-hab10','value'),
+    Input('drop-turma10','value'),
+    Input('drop-escola10','value')
+)
+def acertos(hab, turma, escola):
+    d = df_port1ano.loc[df_port1ano['Escola']==escola]
+    df = d[d['Turma']==turma]
+    dff= df[hab]
+    acerto = 0
+    erro = 0
+    for i in dff:
+        if i > 0:
+            acerto= acerto+1
+        else:
+            erro = erro +1
+    fig= px.pie( values=[acerto, erro], names = {acerto:'Apresentaram Domínio Mínimo', erro:'Não Apresentaram Domínio Mínimo'}, color={'Apresentaram Domínio Mínimo':'#0000ff','Não Apresentaram Domínio Mínimo':'#ff0000'}, title='Percentual de estudantes que mostraram <br> pelo menos domínio mínimo na habilidade '+str(hab)+' na turma '+str(turma).upper())
+    return fig
+
+@app.callback(
+    Output('fighabs10','figure'),
+    Input('drop-turma10','value'),
+    Input('drop-escola10','value')
+)
+def habs( turma,escola):
+    d = df_port1ano.loc[df_port1ano['Escola']==escola]
+    df = d[d['Turma']==turma]
+    fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
+    fig.update_layout(showlegend=False)
+    fig.update_yaxes( title= 'Quantidade de Estudantes')
+    return fig
+
 

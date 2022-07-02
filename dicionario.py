@@ -106,6 +106,132 @@ EF09MA17 = 'Reconhecer vistas ortogonais de figuras espaciais e aplicar esse con
 EF09MA23 = 'Planejar e executar pesquisa amostral envolvendo tema da realidade social e comunicar os resultados por meio de relatório contendo avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados, construídos com o apoio de planilhas eletrônicas.'
 EF09MA23aTO = 'Planejar e executar pesquisa amostral envolvendo tema da realidade social presentes na vida cotidiana.'
 EF09MA23bTO = 'Apresentar os resultados por meio de relatório contendo avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados, construídos com o apoio de planilhas eletrônicas'
+EF12LP04= 'Ler e compreender, em colaboração com os colegas e com a ajuda do professor ou já com certa autonomia, listas, agendas, calendários, avisos, convites, receitas, instruções de montagem (digitais ou impressos), dentre outros gêneros do campo da vida cotidiana, considerando a situação comunicativa e o tema/assunto do texto e relacionando sua forma de organização à sua finalidade.'
+EF01LP16= 'Ler e compreender, em colaboração com os colegas e com a ajuda do professor, quadras, quadrinhas, parlendas, trava-línguas, dentre outros gêneros do campo da vida cotidiana, considerando a situação comunicativa e o tema/assunto do texto e relacionando sua forma de organização à sua finalidade.'
+EF01LP01= 'Reconhecer que textos são lidos e escritos da esquerda para a direita e de cima para baixo da página.'
+EF15LP15= 'Reconhecer que os textos literários fazem parte do mundo do imaginário e apresentam uma dimensão lúdica, de encantamento, valorizando-os, em sua diversidade cultural, como patrimônio artístico da humanidade.'
+EF01LP03= 'Observar escritas convencionais, comparando-as às suas produções escritas, percebendo semelhanças e diferenças.'
+EF01LP04 = 'Distinguir as letras do alfabeto de outros sinais gráficos.'
+EF01LP05= 'Reconhecer o sistema de escrita alfabética como representação dos sons da fala.'
+EF01LP20= 'Identificar e reproduzir, em listas, agendas, calendários, regras, avisos, convites, receitas, instruções de montagem e legendas para álbuns, fotos ou ilustrações (digitais ou impressos), a formatação e diagramação específica de cada um desses gêneros.'
+EF01LP06= 'Segmentar oralmente palavras em sílabas.'
+EF01LP07= 'Identificar fonemas e sua representação por letras.'
+EF12LP07= 'Identificar e (re)produzir, em cantiga, quadras, quadrinhas, parlendas, trava-línguas e canções, rimas, aliterações, assonâncias, o ritmo de fala relacionado ao ritmo e à melodia das músicas e seus efeitos de sentido.'
+EF12LP10= 'Ler e compreender, em colaboração com os colegas e com a ajuda do professor, cartazes, avisos, folhetos, regras e regulamentos que organizam a vida na comunidade escolar, dentre outros gêneros do campo da atuação cidadã, considerando a situação comunicativa e o tema/assunto do texto.'
+EF01LP08= 'Relacionar elementos sonoros (sílabas, fonemas, partes de palavras) com sua representação escrita.'
+EF35LP01= 'Ler e compreender, silenciosamente e, em seguida, em voz alta, com autonomia e fluência, textos curtos com nível de textualidade adequado.'
+EF04LP10= 'Ler e compreender, com autonomia, cartas pessoais de reclamação, dentre outros gêneros do campo da vida cotidiana, de acordo com as convenções do gênero carta e considerando a situação comunicativa e o tema/assunto/finalidade do texto.'
+EF15LP03= 'Localizar informações explícitas em textos.'
+EF35LP04= 'Inferir informações implícitas nos textos lidos.'
+EF35LP05= 'Inferir o sentido de palavras ou expressões desconhecidas em textos, com base no contexto da frase ou do texto.'
+EF35LP21= 'Ler e compreender, de forma autônoma, textos literários de diferentes gêneros e extensões, inclusive aqueles sem ilustrações, estabelecendo preferências por gêneros, temas, autores.'
+EF04LP02= 'Ler e escrever, corretamente, palavras com sílabas VV e CVV em casos nos quais a combinação VV (ditongo) é reduzida na língua oral (ai, ei, ou).'
+EF35LP29= 'Identificar, em narrativas, cenário, personagem central, conflito gerador, resolução e o ponto de vista com base no qual histórias são narradas, diferenciando narrativas em primeira e terceira pessoas.'
+EF04LP05= 'Identificar a função na leitura e usar, adequadamente, na escrita ponto final, de interrogação, de exclamação, dois-pontos e travessão em diálogos (discurso direto), vírgula em enumerações e em separação de vocativo e de aposto.'
+EF35LP13= 'Memorizar a grafia de palavras de uso frequente nas quais as relações fonema-grafema são irregulares e com h inicial que não representa fonema.'
+EF35LP12= 'Recorrer ao dicionário para esclarecer dúvida sobre a escrita de palavras, especialmente no caso de palavras com relações irregulares fonema-grafema.'
+EF04LP06= 'Identificar em textos e usar na produção textual a concordância entre substantivo ou pronome pessoal e verbo (concordância verbal).'
+EF15LP01= 'Identificar a função social de textos que circulam em campos da vida social dos quais participa cotidianamente (a casa, a rua, a comunidade, a escola) e nas mídias impressa, de massa e digital, reconhecendo para que foram produzidos, onde circulam, quem os produziu e a quem se destinam.'
+EF03LP12= 'Ler e compreender, com autonomia, cartas pessoais e diários, com expressão de sentimentos e opiniões, dentre outros gêneros do campo da vida cotidiana, de acordo com as convenções do gênero carta e considerando a situação comunicativa e o tema/assunto do texto.'
+EF35LP21= 'Ler e compreender, de forma autônoma, textos literários de diferentes gêneros e extensões, inclusive aqueles sem ilustrações, estabelecendo preferências por gêneros, temas, autores.'
+EF15LP15= 'Reconhecer que os textos literários fazem parte do mundo do imaginário e apresentam uma dimensão lúdica, de encantamento, valorizando-os, em sua diversidade cultural, como patrimônio artístico da humanidade.'
+EF15LP03= 'Localizar informações explícitas em textos.'
+EF35LP04= 'Inferir informações implícitas nos textos lidos.'
+EF35LP05= 'Inferir o sentido de palavras ou expressões desconhecidas em textos, com base no contexto da frase ou do texto.'
+EF35LP03= 'Identificar a ideia central do texto, demonstrando compreensão global.'
+EF03LP17= 'Identificar e reproduzir, em gêneros epistolares e diários, a formatação própria desses textos (relatos de acontecimentos, expressão de vivências, emoções, opiniões ou críticas) e a diagramação específica dos textos desses gêneros (data, saudação, corpo do texto, despedida, assinatura).'
+EF35LP12= 'Recorrer ao dicionário para esclarecer dúvida sobre a escrita de palavras, especialmente no caso de palavras com relações irregulares fonema-grafema.'
+EF03LP01= 'Ler e escrever palavras com correspondências regulares contextuais entre grafemas e fonemas – c/qu; g/gu; r/rr; s/ss; o (e não u) e e (e não i) em sílaba átona em final de palavra – e com marcas de nasalidade (til, m, n).'
+EF03LP03= 'Ler e escrever corretamente palavras com os dígrafos lh, nh, ch.'
+EF03LP07= 'Identificar a função na leitura e usar na escrita ponto final, ponto de interrogação, ponto de exclamação e, em diálogos (discurso direto), dois-pontos e travessão.'
+EF35LP01= 'Ler e compreender, silenciosamente e, em seguida, em voz alta, com autonomia e fluência, textos curtos com nível de textualidade adequado.'
+EF04LP10= 'Ler e compreender, com autonomia, cartas pessoais de reclamação, dentre outros gêneros do campo da vida cotidiana, de acordo com as convenções do gênero carta e considerando a situação comunicativa e o tema/assunto/finalidade do texto.'
+EF15LP03= 'Localizar informações explícitas em textos.'
+EF35LP04= 'Inferir informações implícitas nos textos lidos.'
+EF35LP05= 'Inferir o sentido de palavras ou expressões desconhecidas em textos, com base no contexto da frase ou do texto.'
+EF35LP21= 'Ler e compreender, de forma autônoma, textos literários de diferentes gêneros e extensões, inclusive aqueles sem ilustrações, estabelecendo preferências por gêneros, temas, autores.'
+EF04LP02= 'Ler e escrever, corretamente, palavras com sílabas VV e CVV em casos nos quais a combinação VV (ditongo) é reduzida na língua oral (ai, ei, ou).'
+EF35LP29 ='Identificar, em narrativas, cenário, personagem central, conflito gerador, resolução e o ponto de vista com base no qual histórias são narradas, diferenciando narrativas em primeira e terceira pessoas.'
+EF04LP05= 'Identificar a função na leitura e usar, adequadamente, na escrita ponto final, de interrogação, de exclamação, dois-pontos e travessão em diálogos (discurso direto), vírgula em enumerações e em separação de vocativo e de aposto.'
+EF35LP13= 'Memorizar a grafia de palavras de uso frequente nas quais as relações fonema-grafema são irregulares e com h inicial que não representa fonema.'
+EF35LP12= 'Recorrer ao dicionário para esclarecer dúvida sobre a escrita de palavras, especialmente no caso de palavras com relações irregulares fonema-grafema.'
+EF04LP06= 'Identificar em textos e usar na produção textual a concordância entre substantivo ou pronome pessoal e verbo (concordância verbal).'
+EF35LP01= 'Ler e compreender, silenciosamente e, em seguida, em voz alta, com autonomia e fluência, textos curtos com nível de textualidade adequado.'
+EF05LP10= 'Ler e compreender, com autonomia, anedotas, piadas e cartuns, dentre outros gêneros do campo da vida cotidiana, de acordo com as convenções do gênero e considerando a situação comunicativa e a finalidade do texto.'
+EF15LP14= 'Construir o sentido de histórias em quadrinhos e tirinhas, relacionando imagens e palavras e interpretando recursos gráficos (tipos de balões, de letras, onomatopeias).'
+EF15LP04= 'Identificar o efeito de sentido produzido pelo uso de recursos expressivos gráfico-visuais em textos multissemióticos.'
+EF15LP02= 'Estabelecer expectativas em relação ao texto que vai ler (pressuposições antecipadoras dos sentidos, da forma e da função social do texto), apoiando-se em seus conhecimentos prévios sobre as condições de produção e recepção desse texto, o gênero, o suporte e o universo temático, bem como sobre saliências textuais, recursos gráficos, imagens, dados da própria obra (índice, prefácio etc.), confirmando antecipações e inferências realizadas antes e durante a leitura de textos, checando a adequação das hipóteses realizadas.'
+EF35LP21= 'Ler e compreender, de forma autônoma, textos literários de diferentes gêneros e extensões, inclusive aqueles sem ilustrações, estabelecendo preferências por gêneros, temas, autores.'
+EF15LP18= 'Relacionar texto com ilustrações e outros recursos gráficos.'
+EF35LP06= 'Recuperar relações entre partes de um texto, identificando substituições lexicais (de substantivos por sinônimos) ou pronominais (uso de pronomes anafóricos – pessoais, possessivos, demonstrativos) que contribuem para a continuidade do texto.'
+EF35LP26= 'Ler e compreender, com certa autonomia, narrativas ficcionais que apresentem cenários e personagens, observando os elementos da estrutura narrativa: enredo, tempo, espaço, personagens, narrador e a construção do discurso indireto e discurso direto.'
+EF05LP11= 'Registrar, com autonomia, anedotas, piadas e cartuns, dentre outros gêneros do campo da vida cotidiana, de acordo com as convenções do gênero e considerando a situação comunicativa e a finalidade do texto.'
+EF05LP01= 'Grafar palavras utilizando regras de correspondência fonema-grafema regulares, contextuais e morfológicas e palavras de uso frequente com correspondências irregulares. '
+EF05LP02= 'Identificar o caráter polissêmico das palavras (uma mesma palavra com diferentes significados, de acordo com o contexto de uso), comparando o significado de determinados termos utilizados nas áreas científicas com esses mesmos termos utilizados na linguagem usual.'
+EF05LP08= 'Diferenciar palavras primitivas, derivadas e compostas, e derivadas por adição de prefixo e de sufixo.'
+EF05LP04= 'Diferenciar, na leitura de textos, vírgula, ponto e vírgula, dois-pontos e reconhecer, na leitura de textos, o efeito de sentido que decorre do uso de reticências, aspas, parênteses.'
+EF05LP20= 'Analisar a validade e força de argumentos em argumentações sobre produtos de mídia para público infantil (filmes, desenhos animados, HQs, games etc.), com base em conhecimentos sobre os mesmos.'
+EF35LP29= 'Identificar, em narrativas, cenário, personagem central, conflito gerador, resolução e o ponto de vista com base no qual histórias são narradas, diferenciando narrativas em primeira e terceira pessoas.'
+EF35LP30= 'Diferenciar discurso indireto e discurso direto, determinando o efeito de sentido de verbos de enunciação e explicando o uso de variedades linguísticas no discurso direto, quando for o caso.'
+EF02LP06 = 'Perceber o princípio acrofônico que opera nos nomes das letras do alfabeto.'
+EF01LP12 = 'Reconhecer a separação das palavras, na escrita, por espaços em branco.'
+EF02LP02 = 'Segmentar palavras em sílabas e remover e substituir sílabas iniciais, mediais ou finais para criar novas palavras.'
+EF12LP09 = 'Ler e compreender, em colaboração com os colegas e com a ajuda do professor, slogans, anúncios publicitários e textos de campanhas de conscientização destinados ao público infantil, dentre outros gêneros do campo publicitário, considerando a situação comunicativa e o tema/assunto do texto.'
+EF12LP15 = 'Identificar a forma de composição de slogans publicitários.'
+EF02LP28 = 'Reconhecer o conflito gerador de uma narrativa ficcional e sua resolução, além de palavras, expressões e frases que caracterizam personagens e ambientes.'
+EF67LP01= 'Analisar a estrutura e funcionamento dos hiperlinks em textos noticiosos publicados na Web e vislumbrar possibilidades de uma escrita hipertextual.'
+EF06LP05= 'Identificar os efeitos de sentido dos modos verbais, considerando o gênero textual e a intenção comunicativa.'
+EF67LP28= 'Ler, de forma autônoma, e compreender – selecionando procedimentos e estratégias de leitura adequados a diferentes objetivos e levando em conta características dos gêneros e suportes –, romances infantojuvenis, contos populares, contos de terror, lendas brasileiras, indígenas e africanas, narrativas de aventuras, narrativas de enigma, mitos, crônicas, autobiografias, histórias em quadrinhos, mangás, poemas de forma livre e fixa (como sonetos e cordéis), vídeo-poemas, poemas visuais, dentre outros, expressando avaliação sobre o texto lido e estabelecendo preferências por gêneros, temas, autores.'
+EF06LP04= 'Analisar a função e as flexões de substantivos e adjetivos e de verbos nos modos Indicativo, Subjuntivo e Imperativo: afirmativo e negativo.'
+EF69LP55= 'Reconhecer as variedades da língua falada, o conceito de norma-padrão e o de preconceito linguístico.'
+EF06LP01= 'Reconhecer a impossibilidade de uma neutralidade absoluta no relato de fatos e identificar diferentes graus de parcialidade/imparcialidade dados pelo recorte feito e pelos efeitos de sentido advindos de escolhas feitas pelo autor, de forma a poder desenvolver uma atitude crítica frente aos textos jornalísticos e tornar-se consciente das escolhas feitas enquanto produtor de textos.'
+EF06LP02= 'Estabelecer relação entre os diferentes gêneros jornalísticos, compreendendo a centralidade da notícia.'
+EF67LP32= 'Escrever palavras com correção ortográfica, obedecendo as convenções da língua escrita.'
+EF67LP33= 'Pontuar textos adequadamente.'
+EF67LP35= 'Distinguir palavras derivadas por acréscimo de afixos e palavras compostas'
+EF67LP36= 'Utilizar, ao produzir texto, recursos de coesão referencial (léxica e pronominal) e sequencial e outros recursos expressivos adequados ao gênero textual.'
+EF69LP01= 'Diferenciar liberdade de expressão de discursos de ódio, posicionando- -se contrariamente a esse tipo de discurso e vislumbrando possibilidades de denúncia quando for o caso.'
+EF07LP09= 'Identificar, em textos lidos ou de produção própria, advérbios e locuções adverbiais que ampliam o sentido do verbo núcleo da oração'
+EF07LP01= 'Distinguir diferentes propostas editoriais – sensacionalismo, jornalismo investigativo etc. –, de forma a identificar os recursos utilizados para impactar/chocar o leitor que podem comprometer uma análise crítica da notícia e do fato noticiado.'
+EF07LP02= 'Comparar notícias e reportagens sobre um mesmo fato divulgadas em diferentes mídias, analisando as especificidades das mídias, os processos de (re)elaboração dos textos e a convergência das mídias em notícias ou reportagens multissemióticas'
+EF07LP03= 'Formar, com base em palavras primitivas, palavras derivadas com os prefixos e sufixos mais produtivos no português.'
+EF89LP01= 'Analisar os interesses que movem o campo jornalístico, os efeitos das novas tecnologias no campo e as condições que fazem da informação uma mercadoria, de forma a poder desenvolver uma atitude crítica frente aos textos jornalísticos.'
+EF89LP14= 'Analisar, em textos argumentativos e propositivos, os movimentos argumentativos de sustentação, refutação e negociação e os tipos de argumentos, avaliando a força/tipo dos argumentos utilizados.'
+EF89LP16= 'Analisar a modalização realizada em textos noticiosos e argumentativos, por meio das modalidades apreciativas, viabilizadas por classes e estruturas gramaticais como adjetivos, locuções adjetivas, advérbios, locuções adverbiais, orações adjetivas e adverbiais, orações relativas restritivas e explicativas etc., de maneira a perceber a apreciação ideológica sobre os fatos noticiados ou as posições implícitas ou assumidas.'
+EF08LP01= 'Identificar e comparar as várias editorias de jornais impressos e digitais e de sites noticiosos, de forma a refletir sobre os tipos de fato que são noticiados e comentados, as escolhas sobre o que noticiar e o que não noticiar e o destaque/enfoque dado e a fidedignidade da informação.'
+EF89LP04= 'Identificar e avaliar teses/opiniões/posicionamentos explícitos e implícitos, argumentos e contra-argumentos em textos argumentativos do campo (carta de leitor, comentário, artigo de opinião, resenha crítica etc.), posicionando-se frente à questão controversa de forma sustentada.'
+EF69LP56= 'Fazer uso consciente e reflexivo de regras e normas da norma-padrão em situações de fala e escrita nas quais ela deve ser usada.'
+EF89LP32= 'Analisar os efeitos de sentido decorrentes do uso de mecanismos de intertextualidade (referências, alusões, retomadas) entre os textos literários, entre esses textos literários e outras manifestações artísticas (cinema, teatro, artes visuais e midiáticas, música), quanto aos temas, personagens, estilos, autores etc., e entre o texto original e paródias, paráfrases, pastiches, trailer honesto, vídeos-minuto, vidding, dentre outros.'
+EF89LP17= 'Relacionar textos e documentos legais e normativos de importância universal, nacional ou local que envolvam direitos, em especial, de crianças, adolescentes e jovens – tais como a Declaração dos Direitos Humanos, a Constituição Brasileira, o ECA -, e a regulamentação da organização escolar – por exemplo, regimento escolar -, a seus contextos de produção, reconhecendo e analisando possíveis motivações, finalidades e sua vinculação com experiências humanas e fatos históricos e sociais, como forma de ampliar a compreensão dos direitos e deveres, de fomentar os princípios democráticos e uma atuação pautada pela ética da responsabilidade (o outro tem direito a uma vida digna tanto quanto eu tenho).'
+EF89LP23= 'Analisar, em textos argumentativos, reivindicatórios e propositivos, os movimentos argumentativos utilizados (sustentação, refutação e negociação), avaliando a força dos argumentos utilizados.'
+EF89LP05= 'Analisar o efeito de sentido produzido pelo uso, em textos, de recurso a formas de apropriação textual (paráfrases, citações, discurso direto, indireto ou indireto livre).'
+EF09LP12= 'Identificar estrangeirismos, caracterizando-os segundo a conservação, ou não, de sua forma gráfica de origem, avaliando a pertinência, ou não, de seu uso.'
+EF89LP02= 'Analisar diferentes práticas (curtir, compartilhar, comentar, curar etc.) e textos pertencentes a diferentes gêneros da cultura digital (meme, gif, comentário, charge digital etc.) envolvidos no trato com a informação e opinião, de forma a possibilitar uma presença mais crítica e ética nas redes.'
+EF09LP01= 'Analisar o fenômeno da disseminação de notícias falsas nas redes sociais e desenvolver estratégias para reconhecê-las, a partir da verificação/avaliação do veículo, fonte, data e local da publicação, autoria, URL, da análise da formatação, da comparação de diferentes fontes, da consulta a sites de curadoria que atestam a fidedignidade do relato dos fatos e denunciam boatos etc.'
+EF89LP29= 'Utilizar e perceber mecanismos de progressão temática, tais como retomadas anafóricas (“que, cujo, onde”, pronomes do caso reto e oblíquos, pronomes demonstrativos, nomes correferentes etc.), catáforas (remetendo para adiante ao invés de retomar o já dito), uso de organizadores textuais, de coesivos etc., e analisar os mecanismos de reformulação e paráfrase utilizados nos textos de divulgação do conhecimento.'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

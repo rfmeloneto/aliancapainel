@@ -51,7 +51,7 @@ dcc.Location(id='url', refresh=False),
 html.Div(
     dbc.Container(
         [
-
+            
         ],
         fluid=True,
         className="py-3",
@@ -59,7 +59,7 @@ html.Div(
     ),
     className="p-5 bg-light rounded-3",style={'background-image': 'url("assets/Top-V2-Mapa-de-Habilidades-BNCC-Aliança.png")','background-size': 'cover','background-repeat': 'no-repeat'}
 ),
-
+html.Br(),
 html.Div(
     [
        dbc.Row( children =[ dbc.Col([dbc.Button("Séries", id="open-offcanvas", n_clicks=0, style={'margin-top':3,'margin-left':10, 'width':200})]),dbc.Col([html.H1(children=[], id='titulo', style={'margin-left':150})], width=9)]),
@@ -76,6 +76,8 @@ html.Div(
         ),
     ],
 ),
+
+  html.Br(),
      
   html.Div(id='page-content', children=[])
 

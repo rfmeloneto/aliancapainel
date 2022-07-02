@@ -6,11 +6,13 @@ import plotly.express as px
 import pandas as pd
 import pathlib
 from app import app
+from dicionario import *
 
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port6ano = pd.read_csv(DATA_PATH.joinpath("port6ano.csv")) 
+df_habsport6 = df_port6ano.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -24,6 +26,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF67LP28"),dbc.CardBody(children=[] , id='EF67LP281', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP281')),
             ]
     ),
+     dbc.Popover(
+            totalgeral,
+            target="total16",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF67LP01,
+            target="EF67LP01",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06LP05,
+            target="EF06LP05",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF67LP28,
+            target="EF67LP281",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -33,6 +55,26 @@ layout = html.Div(children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF67LP32"),dbc.CardBody(children=[] , id='EF67LP32', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP32')),
             ]
     ),
+    dbc.Popover(
+            EF06LP04,
+            target="EF06LP04",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF69LP55,
+            target="EF69LP551",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF06LP02,
+            target="EF06LP021",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF67LP32,
+            target="EF67LP32",
+            body=True,
+            trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
@@ -43,6 +85,38 @@ layout = html.Div(children=[
             
             ]
     ),
+    dbc.Popover(
+            EF67LP33,
+            target="EF67LP33",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+           EF67LP35,
+            target="EF67LP351",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF67LP36,
+            target="EF67LP36",
+            body=True,
+            trigger="hover"),
+
+           
+dbc.Row(children=[
+
+    dbc.Col(dcc.Dropdown(df_port6ano['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma15')),
+    dbc.Col(dcc.Dropdown(df_habsport6.columns, value="EF67LP36", style ={'margin-top':10, 'margin-left':5}, id='drop-hab15')),
+    
+]),
+
+html.Br(),
+dbc.Row(children=[
+
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs15',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto15',config= {'displaylogo': False}))),
+
+
+]),
 
 
 ])
@@ -279,3 +353,33 @@ def hab10(turma):
     else:
         return str(media), 'danger'
 
+#-----------------------------------------------------------------------
+
+@app.callback(
+    Output('figacerto15','figure'),
+    Input('drop-hab15','value'),
+    Input('drop-turma15','value'),
+)
+def acertos(hab, turma):
+    d = df_port6ano.loc[df_port6ano['Turma']==turma]
+    dff= d[hab]
+    acerto = 0
+    erro = 0
+    for i in dff:
+        if i > 0:
+            acerto= acerto+1
+        else:
+            erro = erro +1
+    fig= px.pie( values=[acerto, erro], names = {acerto:'Apresentaram Domínio Mínimo', erro:'Não Apresentaram Domínio Mínimo'}, color={'Apresentaram Domínio Mínimo':'#0000ff','Não Apresentaram Domínio Mínimo':'#ff0000'}, title='Percentual de estudantes que mostraram <br> pelo menos domínio mínimo na habilidade '+str(hab)+' na turma '+str(turma).upper())
+    return fig
+
+@app.callback(
+    Output('fighabs15','figure'),
+    Input('drop-turma15','value'),
+)
+def habs(turma):
+    df = df_port6ano.loc[df_port6ano['Turma']==turma]
+    fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
+    fig.update_layout(showlegend=False)
+    fig.update_yaxes( title= 'Quantidade de Estudantes')
+    return fig
