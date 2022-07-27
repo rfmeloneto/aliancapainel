@@ -9,7 +9,10 @@ from app import app, server
 # Connect to your app pages
 from apps import (mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano,
                   mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano,
-                  port4ano, port5ano, port6ano, port7ano, port8ano, port9ano)
+                  port4ano, port5ano, port6ano, port7ano, port8ano, port9ano,
+                  mat1ano2bi, mat2ano2bi, mat3ano2bi, mat4ano2bi, mat5ano2bi, mat6ano2bi,
+                  mat7ano2bi, mat8ano2bi, mat9ano2bi, port1ano2bi, port2ano2bi, port3ano2bi,
+                  port4ano2bi, port5ano2bi, port6ano2bi, port7ano2bi, port8ano2bi, port9ano2bi)
 
 button = html.Div(children=
     [
@@ -48,25 +51,25 @@ button = html.Div(children=
             color="primary",
             n_clicks=0,),
         dbc.Collapse(children=[
-            dbc.Button('Matemática 1 Ano', href='/apps/mat1ano', outline=True, className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 2 Ano', href='/apps/mat2ano', outline=True, className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 3 Ano', href='/apps/mat3ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 4 Ano', href='/apps/mat4ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 5 Ano', href='/apps/mat5ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 6 Ano', href='/apps/mat6ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 7 Ano', href='/apps/mat7ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 8 Ano', href='/apps/mat8ano', outline=True,className="d-grid gap-2",color="primary"),
-            dbc.Button('Matemática 9 Ano', href='/apps/mat9ano', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 1 Ano', href='/apps/mat1ano2bi', outline=True, className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 2 Ano', href='/apps/mat2ano2bi', outline=True, className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 3 Ano', href='/apps/mat3ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 4 Ano', href='/apps/mat4ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 5 Ano', href='/apps/mat5ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 6 Ano', href='/apps/mat6ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 7 Ano', href='/apps/mat7ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 8 Ano', href='/apps/mat8ano2bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 9 Ano', href='/apps/mat9ano2bi', outline=True,className="d-grid gap-2",color="primary"),
             html.Br(), 
-            dbc.Button('Português 1 Ano', href='/apps/port1ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 2 Ano', href='/apps/port2ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 3 Ano', href='/apps/port3ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 4 Ano', href='/apps/port4ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 5 Ano', href='/apps/port5ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 6 Ano', href='/apps/port6ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 7 Ano', href='/apps/port7ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 8 Ano', href='/apps/port8ano', outline=True,className="d-grid gap-2",color="success"),
-            dbc.Button('Português 9 Ano', href='/apps/port9ano', outline=True,className="d-grid gap-2",color="success"), 
+            dbc.Button('Português 1 Ano', href='/apps/port1ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 2 Ano', href='/apps/port2ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 3 Ano', href='/apps/port3ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 4 Ano', href='/apps/port4ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 5 Ano', href='/apps/port5ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 6 Ano', href='/apps/port6ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 7 Ano', href='/apps/port7ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 8 Ano', href='/apps/port8ano2bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 9 Ano', href='/apps/port9ano2bi', outline=True,className="d-grid gap-2",color="success"), 
     ], id="collapse2bi", is_open=False, className="mt-3"),
  
     
@@ -156,6 +159,42 @@ def display_page(pathname):
         return port8ano.layout, 'Português 8 Ano / 1 Bimestre'
     if pathname == '/apps/port9ano':
         return port9ano.layout, 'Português 9 Ano / 1 Bimestre'
+    if pathname == '/apps/mat1ano2bi':
+        return mat1ano2bi.layout, 'Matemática 1 Ano / 2 Bimestre'
+    if pathname == '/apps/mat2ano2bi':
+        return mat2ano2bi.layout, 'Matemática 2 Ano / 2 Bimestre'
+    if pathname == '/apps/mat3ano2bi':
+        return mat3ano2bi.layout, 'Matemática 3 Ano / 2 Bimestre'
+    if pathname == '/apps/mat4ano2bi':
+        return mat4ano2bi.layout, 'Matemática 4 Ano / 2 Bimestre'
+    if pathname == '/apps/mat5ano2bi':
+        return mat5ano2bi.layout, 'Matemática 5 Ano / 2 Bimestre'
+    if pathname == '/apps/mat6ano2bi':
+        return mat6ano2bi.layout, 'Matemática 6 Ano / 2 Bimestre'
+    if pathname == '/apps/mat7ano2bi':
+        return mat7ano2bi.layout, 'Matemática 7 Ano / 2 Bimestre'
+    if pathname == '/apps/mat8ano2bi':
+        return mat8ano2bi.layout, 'Matemática 8 Ano / 2 Bimestre'
+    if pathname == '/apps/mat9ano2bi':
+        return mat9ano2bi.layout, 'Matemática 9 Ano / 2 Bimestre'
+    if pathname == '/apps/port1ano2bi':
+        return port1ano2bi.layout, 'Português 1 Ano / 2 Bimestre'
+    if pathname == '/apps/port2ano2bi':
+        return port2ano2bi.layout, 'Português 2 Ano / 2 Bimestre'
+    if pathname == '/apps/port3ano2bi':
+        return port3ano2bi.layout, 'Português 3 Ano / 2 Bimestre'
+    if pathname == '/apps/port4ano2bi':
+        return port4ano2bi.layout, 'Português 4 Ano / 2 Bimestre'
+    if pathname == '/apps/port5ano2bi':
+        return port5ano2bi.layout, 'Português 5 Ano / 2 Bimestre'
+    if pathname == '/apps/port6ano2bi':
+        return port6ano2bi.layout, 'Português 6 Ano / 2 Bimestre'
+    if pathname == '/apps/port7ano2bi':
+        return port7ano2bi.layout, 'Português 7 Ano / 2 Bimestre'
+    if pathname == '/apps/port8ano2bi':
+        return port8ano2bi.layout, 'Português 8 Ano / 2 Bimestre'
+    if pathname == '/apps/port9ano2bi':
+        return port9ano2bi.layout, 'Português 9 Ano / 2 Bimestre'
     else:
         return mat1ano.layout, 'Matemática 1 Ano / 1 Bimestre'
 
