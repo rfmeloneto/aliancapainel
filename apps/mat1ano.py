@@ -1,14 +1,13 @@
-from dash import dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-import dash_bootstrap_components as dbc
-from numpy import tile
-import plotly.express as px
-import pandas as pd
 import pathlib
-from app import app
-from dicionario import *
 
+import dash_bootstrap_components as dbc
+import dash_html_components as html
+import pandas as pd
+import plotly.express as px
+from app import app
+from dash import dcc
+from dash.dependencies import Input, Output
+from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
