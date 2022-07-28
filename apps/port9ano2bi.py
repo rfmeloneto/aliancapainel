@@ -11,84 +11,84 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_port9ano = pd.read_csv(DATA_PATH.joinpath("port9ano.csv")) 
-df_habsport9 = df_port9ano.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
+df_port9ano2bi = pd.read_csv(DATA_PATH.joinpath("port9ano2bi.csv")) 
+df_habsport92bi = df_port9ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
 
 layout = html.Div(children=[
     
-    dbc.Row(dbc.Col(dcc.Dropdown(df_port9ano['Turma'].unique(), value='u', style ={'margin-top':10, 'margin-left':5}, id='drop-down19',), width=2)),
+    dbc.Row(dbc.Col(dcc.Dropdown(df_port9ano2bi['Turma'].unique(), value='u', style ={'margin-top':10, 'margin-left':5}, id='drop-down192bi',), width=2)),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total19', style={'font-size':30, 'margin':'auto'})], id='cardtotal19')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP05"),dbc.CardBody(children=[] , id='EF89LP05', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP05')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP12"),dbc.CardBody(children=[] , id='EF09LP12', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP12')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP02"),dbc.CardBody(children=[] , id='EF89LP02', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP02')),
+            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total192bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal192bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP02"),dbc.CardBody(children=[] , id='EF09LP022bi', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP022bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP04"),dbc.CardBody(children=[] , id='EF89LP042bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP042bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP11"),dbc.CardBody(children=[] , id='EF09LP112bi', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP112bi')),
             ]
     ),
     dbc.Popover(
             totalgeral,
-            target="total19",
+            target="total192bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF89LP05,
-            target="EF89LP05",
+            EF09LP02,
+            target="EF09LP022bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF09LP12,
-            target="EF09LP12",
+            EF89LP04,
+            target="EF89LP042bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF89LP02,
-            target="EF89LP02",
+            EF09LP11,
+            target="EF09LP112bi",
             body=True,
             trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP01"),dbc.CardBody(children=[] , id='EF09LP01', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP01')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP29"),dbc.CardBody(children=[] , id='EF89LP29', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP29')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP17"),dbc.CardBody(children=[] , id='EF89LP173', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP173')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP32"),dbc.CardBody(children=[] , id='EF89LP323', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP323')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP10"),dbc.CardBody(children=[] , id='EF09LP102bi', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP102bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP33"),dbc.CardBody(children=[] , id='EF89LP332bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP332bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF09LP12"),dbc.CardBody(children=[] , id='EF09LP1232bi', style={'font-size':30, 'margin':'auto'})], id='cardEF09LP1232bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF69LP27"),dbc.CardBody(children=[] , id='EF69LP2732bi', style={'font-size':30, 'margin':'auto'})], id='cardEF69LP2732bi')),
             ]
     ),
     dbc.Popover(
-            EF09LP01,
-            target="EF09LP01",
+            EF09LP10,
+            target="EF09LP102bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF89LP29,
-            target="EF89LP29",
+            EF89LP33,
+            target="EF89LP332bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF89LP17,
-            target="EF89LP173",
+            EF09LP12,
+            target="EF09LP1232bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF89LP32,
-            target="EF89LP323",
+            EF69LP27,
+            target="EF69LP2732bi",
             body=True,
             trigger="hover"),
     html.Br(),
 
     dbc.Row(children=[
 
-    dbc.Col(dcc.Dropdown(df_port9ano['Turma'].unique(), value='u', style ={'margin-top':10, 'margin-left':5}, id='drop-turma18')),
-    dbc.Col(dcc.Dropdown(df_habsport9.columns, value="EF89LP32", style ={'margin-top':10, 'margin-left':5}, id='drop-hab18')),
+    dbc.Col(dcc.Dropdown(df_port9ano2bi['Turma'].unique(), value='u', style ={'margin-top':10, 'margin-left':5}, id='drop-turma182bi')),
+    dbc.Col(dcc.Dropdown(df_habsport92bi.columns, value="EF69LP27", style ={'margin-top':10, 'margin-left':5}, id='drop-hab182bi')),
     
 ]),
 
 html.Br(),
 dbc.Row(children=[
 
-    dbc.Col( dbc.Card(dcc.Graph(id='fighabs18',config= {'displaylogo': False}))),
-    dbc.Col( dbc.Card(dcc.Graph(id='figacerto18',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs182bi',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto182bi',config= {'displaylogo': False}))),
 
 
 ]),
@@ -98,12 +98,12 @@ dbc.Row(children=[
 ])
 
 @app.callback(
-    Output('total19','children'),
-    Output('cardtotal19', 'color'),
-    Input('drop-down19','value')
+    Output('total192bi','children'),
+    Output('cardtotal192bi', 'color'),
+    Input('drop-down192bi','value')
 )
 def habtotal(turma):
-    df = df_port9ano.loc[df_port9ano['Turma']==turma]
+    df = df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
     soma = df['Total'].values.sum()
     qtd = df['Total'].count()
     soma=int(soma)
@@ -117,14 +117,14 @@ def habtotal(turma):
         return str(media), 'danger'
 #----------------------------------------------------------------------
 @app.callback(
-    Output('EF89LP05','children'),
-    Output('cardEF89LP05', 'color'),
-    Input('drop-down19','value')
+    Output('EF09LP022bi','children'),
+    Output('cardEF09LP022bi', 'color'),
+    Input('drop-down192bi','value')
 )
 def hab1(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
-    soma = df['EF89LP05'].values.sum()
-    qtd = df['EF89LP05'].count()
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
+    soma = df['EF09LP02'].values.sum()
+    qtd = df['EF09LP02'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -138,12 +138,97 @@ def hab1(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF09LP12','children'),
-    Output('cardEF09LP12', 'color'),
-    Input('drop-down19','value')
+    Output('EF89LP042bi','children'),
+    Output('cardEF89LP042bi', 'color'),
+    Input('drop-down192bi','value')
 )
 def hab2(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
+    soma = df['EF89LP04'].values.sum()
+    qtd = df['EF89LP04'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF09LP112bi','children'),
+    Output('cardEF09LP112bi', 'color'),
+    Input('drop-down192bi','value')
+)
+def hab3(turma):
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma] 
+    soma = df['EF09LP11'].values.sum()
+    qtd = df['EF09LP11'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF09LP102bi','children'),
+    Output('cardEF09LP102bi', 'color'),
+    Input('drop-down192bi','value')
+)
+def hab4(turma):
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
+    soma = df['EF09LP10'].values.sum()
+    qtd = df['EF09LP10'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF89LP332bi','children'),
+    Output('cardEF89LP332bi', 'color'),
+    Input('drop-down192bi','value')
+)
+def hab5(turma):
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
+    soma = df['EF89LP33'].values.sum()
+    qtd = df['EF89LP33'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF09LP1232bi','children'),
+    Output('cardEF09LP1232bi', 'color'),
+    Input('drop-down192bi','value')
+)
+def hab6(turma):
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
     soma = df['EF09LP12'].values.sum()
     qtd = df['EF09LP12'].count()
     media= soma/qtd
@@ -156,103 +241,18 @@ def hab2(turma):
     else:
         return str(media), 'danger'
 
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF89LP02','children'),
-    Output('cardEF89LP02', 'color'),
-    Input('drop-down19','value')
-)
-def hab3(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma] 
-    soma = df['EF89LP02'].values.sum()
-    qtd = df['EF89LP02'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
 
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF09LP01','children'),
-    Output('cardEF09LP01', 'color'),
-    Input('drop-down19','value')
-)
-def hab4(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
-    soma = df['EF09LP01'].values.sum()
-    qtd = df['EF09LP01'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF89LP29','children'),
-    Output('cardEF89LP29', 'color'),
-    Input('drop-down19','value')
-)
-def hab5(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
-    soma = df['EF89LP29'].values.sum()
-    qtd = df['EF89LP29'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF89LP173','children'),
-    Output('cardEF89LP173', 'color'),
-    Input('drop-down19','value')
-)
-def hab6(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
-    soma = df['EF89LP17'].values.sum()
-    qtd = df['EF89LP17'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF89LP323','children'),
-    Output('cardEF89LP323', 'color'),
-    Input('drop-down19','value')
+    Output('EF69LP2732bi','children'),
+    Output('cardEF69LP2732bi', 'color'),
+    Input('drop-down192bi','value')
 )
 def hab7(turma):
-    df= df_port9ano.loc[df_port9ano['Turma']==turma]
-    soma = df['EF89LP32'].values.sum()
-    qtd = df['EF89LP32'].count()
+    df= df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
+    soma = df['EF69LP27'].values.sum()
+    qtd = df['EF69LP27'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -266,12 +266,12 @@ def hab7(turma):
 #-----------------------------------------------------------------------
 
 @app.callback(
-    Output('figacerto18','figure'),
-    Input('drop-hab18','value'),
-    Input('drop-turma18','value'),
+    Output('figacerto182bi','figure'),
+    Input('drop-hab182bi','value'),
+    Input('drop-turma182bi','value'),
 )
 def acertos(hab, turma):
-    d = df_port9ano.loc[df_port9ano['Turma']==turma]
+    d = df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
     dff= d[hab]
     acerto = 0
     erro = 0
@@ -284,11 +284,11 @@ def acertos(hab, turma):
     return fig
 
 @app.callback(
-    Output('fighabs18','figure'),
-    Input('drop-turma18','value'),
+    Output('fighabs182bi','figure'),
+    Input('drop-turma182bi','value'),
 )
 def habs(turma):
-    df = df_port9ano.loc[df_port9ano['Turma']==turma]
+    df = df_port9ano2bi.loc[df_port9ano2bi['Turma']==turma]
     fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
     fig.update_layout(showlegend=False)
     fig.update_yaxes( title= 'Quantidade de Estudantes')

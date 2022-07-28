@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat8ano2bi = pd.read_csv(DATA_PATH.joinpath("mat8ano.csv"))
-df_habs82bi= df_mat8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total']) 
+df_habs82bi= df_mat8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0']) 
 
 layout = html.Div(children=[
     
@@ -244,46 +244,7 @@ def hab6(turma):
 
 #-----------------------------------------------------------------
 
-@app.callback(
-    Output('EF08MA13','children'),
-    Output('cardEF08MA13', 'color'),
-    Input('drop-down82bi','value')
-)
-def hab8(turma):
-    df= df_mat8ano2bi.loc[df_mat8ano2bi['Turma']==turma]
-    soma = df['EF08MA13'].values.sum()
-    qtd = df['EF08MA13'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
 
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF08MA15','children'),
-    Output('cardEF08MA15', 'color'),
-    Input('drop-down82bi','value')
-)
-def hab10(turma):
-    df= df_mat8ano2bi.loc[df_mat8ano2bi['Turma']==turma]
-    soma = df['EF08MA15'].values.sum()
-    qtd = df['EF08MA15'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
 
 @app.callback(
     Output('figacerto82bi','figure'),
