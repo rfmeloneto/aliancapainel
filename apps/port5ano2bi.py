@@ -11,7 +11,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port5ano2bi = pd.read_csv(DATA_PATH.joinpath("port5ano2bi.csv")) 
-df_habsport52bi = df_port5ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habsport52bi = df_port5ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -50,7 +50,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF05LP15"),dbc.CardBody(children=[] , id='EF05LP152bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP152bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF05LP16"),dbc.CardBody(children=[] , id='EF05LP162bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP162bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP17"),dbc.CardBody(children=[] , id='EF15LP172bi', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP172bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP17"),dbc.CardBody(children=[] , id='EF15LP172bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP172bi1')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF35LP27"),dbc.CardBody(children=[] , id='EF35LP272bi', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP272bi')),
             ]
     ),
@@ -67,7 +67,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF15LP17,
-            target="EF15LP172bi",
+            target="EF15LP172bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -239,8 +239,8 @@ def hab5(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF15LP172bi','children'),
-    Output('cardEF15LP172bi', 'color'),
+    Output('EF15LP172bi1','children'),
+    Output('cardEF15LP172bi1', 'color'),
     Input('drop-down152bi','value')
 )
 def hab6(turma):

@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat5ano2bi = pd.read_csv(DATA_PATH.joinpath("mat5ano2bi.csv"))
-df_habs52bi= df_mat5ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])  
+df_habs52bi= df_mat5ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])  
 
 layout = html.Div(children=[
     
@@ -234,68 +234,13 @@ def hab6(turma):
 
 #-----------------------------------------------------------------
 
-@app.callback(
-    Output('EF05MA19','children'),
-    Output('cardEF05MA19', 'color'),
-    Input('drop-down5','value')
-)
-def hab7(turma):
-    df= df_mat5ano2bi.loc[df_mat5ano2bi['Turma']==turma]
-    soma = df['EF05MA19'].values.sum()
-    qtd = df['EF05MA19'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
+
 
 
 #-----------------------------------------------------------------
 
-@app.callback(
-    Output('EF05MA24','children'),
-    Output('cardEF05MA24', 'color'),
-    Input('drop-down5','value')
-)
-def hab8(turma):
-    df= df_mat5ano2bi.loc[df_mat5ano2bi['Turma']==turma]
-    soma = df['EF05MA24'].values.sum()
-    qtd = df['EF05MA24'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
 
 
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF05MA25','children'),
-    Output('cardEF05MA25', 'color'),
-    Input('drop-down5','value')
-)
-def hab10(turma):
-    df= df_mat5ano2bi.loc[df_mat5ano2bi['Turma']==turma]
-    soma = df['EF05MA25'].values.sum()
-    qtd = df['EF05MA25'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
 #-----------------------------------------------------------------------
 @app.callback(
     Output('figacerto52bi','figure'),

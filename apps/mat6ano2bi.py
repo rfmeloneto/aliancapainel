@@ -11,7 +11,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat6ano2bi = pd.read_csv(DATA_PATH.joinpath("mat6ano2bi.csv"))
-df_habs62bi= df_mat6ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0']) 
+df_habs62bi= df_mat6ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total']) 
 
 layout = html.Div(children=[
     

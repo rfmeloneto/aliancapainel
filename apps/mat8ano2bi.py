@@ -11,8 +11,8 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_mat8ano2bi = pd.read_csv(DATA_PATH.joinpath("mat8ano.csv"))
-df_habs82bi= df_mat8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0']) 
+df_mat8ano2bi = pd.read_csv(DATA_PATH.joinpath("mat8ano2bi.csv"))
+df_habs82bi= df_mat8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total']) 
 
 layout = html.Div(children=[
     
@@ -51,7 +51,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF08MA19"),dbc.CardBody(children=[] , id='EF08MA192bi', style={'font-size':30, 'margin':'auto'})], id='cardEF08MA192bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF08MA23"),dbc.CardBody(children=[] , id='EF08MA232bi', style={'font-size':30, 'margin':'auto'})], id='cardEF08MA232bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF08MA14"),dbc.CardBody(children=[] , id='EF08MA142bi', style={'font-size':30, 'margin':'auto'})], id='cardEF08MA14')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF08MA14"),dbc.CardBody(children=[] , id='EF08MA142bi', style={'font-size':30, 'margin':'auto'})], id='cardEF08MA142bi')),
             ]
     ),
     dbc.Popover(

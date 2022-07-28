@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat4ano2bi = pd.read_csv(DATA_PATH.joinpath("mat4ano2bi.csv"))
-df_habs42bi= df_mat4ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])  
+df_habs42bi= df_mat4ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])  
 
 layout = html.Div(children=[
     
@@ -22,7 +22,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total42bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal42bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF04MA04"),dbc.CardBody(children=[] , id='EF04MA042bi', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA042bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF04MA03"),dbc.CardBody(children=[] , id='EF04MA032bi', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA02bi3')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF04MA03"),dbc.CardBody(children=[] , id='EF04MA032bi', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA032bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF04MA15"),dbc.CardBody(children=[] , id='EF04MA152bi', style={'font-size':30, 'margin':'auto'})], id='cardEF04MA152bi')),
             ]
     ),
@@ -180,7 +180,7 @@ def hab3(turma):
 @app.callback(
     Output('EF04MA182bi','children'),
     Output('cardEF04MA182bi', 'color'),
-    Input('drop-down4','value')
+    Input('drop-down42bi','value')
 )
 def hab4(turma):
     df= df_mat4ano2bi.loc[df_mat4ano2bi['Turma']==turma]
@@ -199,9 +199,9 @@ def hab4(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF04MA21','children'),
-    Output('cardEF04MA21', 'color'),
-    Input('drop-down4','value')
+    Output('EF04MA212bi','children'),
+    Output('cardEF04MA212bi', 'color'),
+    Input('drop-down42bi','value')
 )
 def hab5(turma):
     df= df_mat4ano2bi.loc[df_mat4ano2bi['Turma']==turma]

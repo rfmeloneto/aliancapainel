@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat1ano2bi = pd.read_csv(DATA_PATH.joinpath("mat1ano2bi.csv"))
-df_habs12bi= df_mat1ano2bi.drop(columns=['Unnamed: 0','Escola','Estudante','Ano','Turma','Total'])
+df_habs12bi = df_mat1ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -122,10 +122,10 @@ dbc.Row(children=[
 ])
 
 @app.callback(
-    Output('total','children'),
-    Output('cardtotal', 'color'),
-    Input('escola','value'),
-    Input('drop-down','value')
+    Output('total2b','children'),
+    Output('cardtotal2b', 'color'),
+    Input('escola2b','value'),
+    Input('drop-down2b','value')
 )
 def habtotal(escola,turma):
 

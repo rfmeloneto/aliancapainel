@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port4ano2bi = pd.read_csv(DATA_PATH.joinpath("port4ano2bi.csv")) 
-df_habsport42bi = df_port4ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habsport42bi = df_port4ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     

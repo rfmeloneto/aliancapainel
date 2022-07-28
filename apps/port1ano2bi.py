@@ -11,7 +11,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port1ano2bi = pd.read_csv(DATA_PATH.joinpath("port1ano2bi.csv"))
-df_habsport12bi = df_port1ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habsport12bi = df_port1ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
  
 
 layout = html.Div(children=[
@@ -25,7 +25,7 @@ layout = html.Div(children=[
     dbc.Row(
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total202bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal202bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF12LP04"),dbc.CardBody(children=[] , id='EF12LP042bi', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP042bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF12LP04"),dbc.CardBody(children=[] , id='EF12LP042bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP042bi1')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF01LP08"),dbc.CardBody(children=[] , id='EF01LP082bi', style={'font-size':30, 'margin':'auto'})], id='cardEF01LP082bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF01LP10"),dbc.CardBody(children=[] , id='EF01LP102bi', style={'font-size':30, 'margin':'auto'})], id='cardEF01LP102bi')),
             ]
@@ -37,7 +37,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF12LP04,
-            target="EF12LP042bi",
+            target="EF12LP042bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -84,7 +84,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF12LP08"),dbc.CardBody(children=[] , id='EF12LP082bi', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP082bi'), width=3),
             dbc.Col( dbc.Card([dbc.CardHeader("EF01LP12"),dbc.CardBody(children=[] , id='EF01LP122bi', style={'font-size':30, 'margin':'auto'})], id='cardEF01LP122bi'), width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF12LP17"),dbc.CardBody(children=[] , id='EF12LP172bi', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP172bi'), width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF12LP17"),dbc.CardBody(children=[] , id='EF12LP172bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF12LP172bi1'), width=3),
             
             ]
     ),
@@ -101,7 +101,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF12LP17,
-            target="EF12LP172bi",
+            target="EF12LP172bi1",
             body=True,
             trigger="hover"),
     
@@ -146,8 +146,8 @@ def habtotal(escola,turma):
         return str(media), 'danger'
 #----------------------------------------------------------------------
 @app.callback(
-    Output('EF12LP042bi','children'),
-    Output('cardEF12LP042bi', 'color'),
+    Output('EF12LP042bi1','children'),
+    Output('cardEF12LP042bi1', 'color'),
     Input('escola22bi','value'),
     Input('drop-down202bi','value')
 )
@@ -360,8 +360,8 @@ def hab10(escola,turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF12LP172bi','children'),
-    Output('cardEF12LP172bi', 'color'),
+    Output('EF12LP172bi1','children'),
+    Output('cardEF12LP172bi1', 'color'),
     Input('escola22bi','value'),
     Input('drop-down202bi','value')
 )

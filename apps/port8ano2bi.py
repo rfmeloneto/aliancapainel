@@ -13,7 +13,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port8ano2bi = pd.read_csv(DATA_PATH.joinpath("port8ano2bi.csv")) 
-df_habsport82bi = df_port8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habsport82bi = df_port8ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -23,7 +23,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody(children=[], id='total182bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal182bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF89LP03"),dbc.CardBody(children=[] , id='EF89LP032bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP032bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP04"),dbc.CardBody(children=[] , id='EF89LP042bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP042bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP04"),dbc.CardBody(children=[] , id='EF89LP042bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP042bi1')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF89LP16"),dbc.CardBody(children=[] , id='EF89LP162bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP162bi')),
             ]
     ),
@@ -39,7 +39,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF89LP04,
-            target="EF89LP042bi",
+            target="EF89LP042bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -79,7 +79,7 @@ layout = html.Div(children=[
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP33"),dbc.CardBody(children=[] , id='EF89LP332bi', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP332bi'), width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF89LP33"),dbc.CardBody(children=[] , id='EF89LP332bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF89LP332bi1'), width=3),
             dbc.Col( dbc.Card([dbc.CardHeader("EF69LP29"),dbc.CardBody(children=[] , id='EF69LP292bi', style={'font-size':30, 'margin':'auto'})], id='cardEF69LP292bi'), width=3),
 
             
@@ -87,7 +87,7 @@ layout = html.Div(children=[
     ),
     dbc.Popover(
             EF89LP33,
-            target="EF89LP332bi",
+            target="EF89LP332bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -156,8 +156,8 @@ def hab1(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF89LP042bi','children'),
-    Output('cardEF89LP042bi', 'color'),
+    Output('EF89LP042bi1','children'),
+    Output('cardEF89LP042bi1', 'color'),
     Input('drop-down182bi','value')
 )
 def hab2(turma):
@@ -285,8 +285,8 @@ def hab7(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF89LP332bi','children'),
-    Output('cardEF89LP332bi', 'color'),
+    Output('EF89LP332bi1','children'),
+    Output('cardEF89LP332bi1', 'color'),
     Input('drop-down182bi','value')
 )
 def hab8(turma):

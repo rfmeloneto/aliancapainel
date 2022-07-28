@@ -11,8 +11,8 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_mat9ano2bi = pd.read_csv(DATA_PATH.joinpath("mat9ano.csv")) 
-df_habs92bi= df_mat9ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_mat9ano2bi = pd.read_csv(DATA_PATH.joinpath("mat9ano2bi.csv")) 
+df_habs92bi= df_mat9ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -223,7 +223,24 @@ def hab10(turma):
 
 
 #-----------------------------------------------------------------
-
+@app.callback(
+    Output('EF09MA222bi','children'),
+    Output('cardEF09MA222bi', 'color'),
+    Input('drop-down92bi','value')
+)
+def hab10(turma):
+    df= df_mat9ano2bi.loc[df_mat9ano2bi['Turma']==turma]
+    soma = df['EF09MA22'].values.sum()
+    qtd = df['EF09MA22'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
 
 
 #-----------------------------------------------------------------

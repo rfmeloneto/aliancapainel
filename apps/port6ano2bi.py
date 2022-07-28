@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_port6ano2bi = pd.read_csv(DATA_PATH.joinpath("port6ano2bi.csv")) 
-df_habsport62bi = df_port6ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habsport62bi = df_port6ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -22,7 +22,7 @@ layout = html.Div(children=[
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total162bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal162bi')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF67LP04"),dbc.CardBody(children=[] , id='EF67LP042bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP042bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP03"),dbc.CardBody(children=[] , id='EF67LP032bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP032bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP03"),dbc.CardBody(children=[] , id='EF67LP032bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP032bi1')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF67LP06"),dbc.CardBody(children=[] , id='EF67LP0612bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP0612bi')),
             ]
     ),
@@ -38,7 +38,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF67LP03,
-            target="EF67LP032bi",
+            target="EF67LP032bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -50,7 +50,7 @@ layout = html.Div(children=[
     dbc.Row(
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("EF67LP05"),dbc.CardBody(children=[] , id='EF67LP052bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP052bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP28"),dbc.CardBody(children=[] , id='EF67LP2812bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP2812bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP28"),dbc.CardBody(children=[] , id='EF67LP2812bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP2812bi1')),
             dbc.Col( dbc.Card([dbc.CardHeader("EF69LP54"),dbc.CardBody(children=[] , id='EF69LP542bi', style={'font-size':30, 'margin':'auto'})], id='cardEF69LP542bi')),
             ]
     ),
@@ -61,7 +61,7 @@ layout = html.Div(children=[
             trigger="hover"),
     dbc.Popover(
             EF67LP28,
-            target="EF67LP2812bi",
+            target="EF67LP2812bi1",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -72,13 +72,13 @@ layout = html.Div(children=[
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP27"),dbc.CardBody(children=[] , id='EF67LP272bi', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP272bi'), width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF67LP27"),dbc.CardBody(children=[] , id='EF67LP272bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF67LP272bi1'), width=3),
            
             ]
     ),
     dbc.Popover(
             EF67LP27,
-            target="EF67LP272bi",
+            target="EF67LP272bi1",
             body=True,
             trigger="hover"),
    
@@ -143,8 +143,8 @@ def hab1(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF67LP032bi','children'),
-    Output('cardEF67LP032bi', 'color'),
+    Output('EF67LP032bi1','children'),
+    Output('cardEF67LP032bi1', 'color'),
     Input('drop-down162bi','value')
 )
 def hab2(turma):
@@ -209,8 +209,8 @@ def hab4(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF67LP2812bi','children'),
-    Output('cardEF67LP2812bi', 'color'),
+    Output('EF67LP2812bi1','children'),
+    Output('cardEF67LP2812bi1', 'color'),
     Input('drop-down162bi','value')
 )
 def hab6(turma):
@@ -253,8 +253,8 @@ def hab7(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF67LP272bi','children'),
-    Output('cardEF67LP272bi', 'color'),
+    Output('EF67LP272bi1','children'),
+    Output('cardEF67LP272bi1', 'color'),
     Input('drop-down162bi','value')
 )
 def hab8(turma):

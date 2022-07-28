@@ -12,7 +12,7 @@ from dicionario import *
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 df_mat3ano2bi = pd.read_csv(DATA_PATH.joinpath("mat3ano2bi.csv"))
-df_habs32bi= df_mat3ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total','Unnamed: 0'])
+df_habs32bi= df_mat3ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
@@ -83,7 +83,6 @@ layout = html.Div(children=[
 
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF03MA27"),dbc.CardBody(children=[] , id='EF03MA272bi', style={'font-size':30, 'margin':'auto'})], id='cardEF03MA272bi'), width=3),
             dbc.Col( dbc.Card([dbc.CardHeader("EF03MA26"),dbc.CardBody(children=[] , id='EF03MA262bi', style={'font-size':30, 'margin':'auto'})], id='cardEF03MA262bi'), width=3),
             
             
@@ -105,7 +104,7 @@ layout = html.Div(children=[
 
     dbc.Row(children=[
 
-    dbc.Col(dcc.Dropdown(df_mat3ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='2b2b')),
+    dbc.Col(dcc.Dropdown(df_mat3ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma32b')),
     dbc.Col(dcc.Dropdown(df_habs32bi.columns, value="EF03MA27", style ={'margin-top':10, 'margin-left':5}, id='drop-hab32b')),
     
 ]),
@@ -123,9 +122,9 @@ dbc.Row(children=[
 ])
 
 @app.callback(
-    Output('total3','children'),
-    Output('cardtotal3', 'color'),
-    Input('drop-down3','value')
+    Output('total32bi','children'),
+    Output('cardtotal32bi', 'color'),
+    Input('drop-down32bi','value')
 )
 def habtotal(turma):
     df = df_mat3ano2bi.loc[df_mat3ano2bi['Turma']==turma]
@@ -296,7 +295,7 @@ def hab7(turma):
 @app.callback(
     Output('EF03MA262bi','children'),
     Output('cardEF03MA262bi', 'color'),
-    Input('drop-down3','value')
+    Input('drop-down32bi','value')
 )
 def hab8(turma):
     df= df_mat3ano2bi.loc[df_mat3ano2bi['Turma']==turma]
@@ -332,7 +331,7 @@ def acertos(hab, turma):
 
 @app.callback(
     Output('fighabs32b','figure'),
-    Input('2b2b','value'),
+    Input('drop-turma32b','value'),
 )
 def habs(turma):
     df = df_mat3ano2bi.loc[df_mat3ano2bi['Turma']==turma]
