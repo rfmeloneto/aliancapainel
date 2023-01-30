@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output, State
 # Connect to main app.py file
 from app import app, server
 # Connect to your app pages
-from apps import mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano, mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano,port4ano, port5ano, port6ano, port7ano, port8ano, port9ano, mat1ano2bi, mat2ano2bi, mat3ano2bi, mat4ano2bi, mat5ano2bi, mat6ano2bi, mat7ano2bi, mat8ano2bi, mat9ano2bi, port1ano2bi, port2ano2bi, port3ano2bi, port4ano2bi, port5ano2bi, port6ano2bi, port7ano2bi, port8ano2bi, port9ano2bi
+from apps import mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano, mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano,port4ano, port5ano, port6ano, port7ano, port8ano, port9ano, mat1ano2bi, mat2ano2bi, mat3ano2bi, mat4ano2bi, mat5ano2bi, mat6ano2bi, mat7ano2bi, mat8ano2bi, mat9ano2bi, port1ano2bi, port2ano2bi, port3ano2bi, port4ano2bi, port5ano2bi, port6ano2bi, port7ano2bi, port8ano2bi, port9ano2bi, mat1ano3bi, mat2ano3bi, mat3ano3bi, mat4ano3bi, mat5ano3bi, mat6ano3bi, mat7ano3bi, mat8ano3bi, mat9ano3bi, port1ano3bi, port2ano3bi, port3ano3bi, port4ano3bi, port5ano3bi, port6ano3bi, port7ano3bi, port8ano3bi, port9ano3bi
 
 button = html.Div(children=
     [
@@ -66,6 +66,34 @@ button = html.Div(children=
             dbc.Button('Português 8 Ano', href='/apps/port8ano2bi', outline=True,className="d-grid gap-2",color="success"),
             dbc.Button('Português 9 Ano', href='/apps/port9ano2bi', outline=True,className="d-grid gap-2",color="success"), 
     ], id="collapse2bi", is_open=False, className="mt-3"),
+     html.Br(),
+    dbc.Button(
+            "Terceiro Bimestre",
+            id="collapse-button3bi",
+            className="mb-3",
+            color="primary",
+            n_clicks=0,),
+        dbc.Collapse(children=[
+            dbc.Button('Matemática 1 Ano', href='/apps/mat1ano3bi', outline=True, className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 2 Ano', href='/apps/mat2ano3bi', outline=True, className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 3 Ano', href='/apps/mat3ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 4 Ano', href='/apps/mat4ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 5 Ano', href='/apps/mat5ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 6 Ano', href='/apps/mat6ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 7 Ano', href='/apps/mat7ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 8 Ano', href='/apps/mat8ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            dbc.Button('Matemática 9 Ano', href='/apps/mat9ano3bi', outline=True,className="d-grid gap-2",color="primary"),
+            html.Br(), 
+            dbc.Button('Português 1 Ano', href='/apps/port1ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 2 Ano', href='/apps/port2ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 3 Ano', href='/apps/port3ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 4 Ano', href='/apps/port4ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 5 Ano', href='/apps/port5ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 6 Ano', href='/apps/port6ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 7 Ano', href='/apps/port7ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 8 Ano', href='/apps/port8ano3bi', outline=True,className="d-grid gap-2",color="success"),
+            dbc.Button('Português 9 Ano', href='/apps/port9ano3bi', outline=True,className="d-grid gap-2",color="success"), 
+    ], id="collapse3bi", is_open=False, className="mt-3"),
  
     
     
@@ -190,6 +218,42 @@ def display_page(pathname):
         return port8ano2bi.layout, 'Português 8 Ano / 2 Bimestre'
     if pathname == '/apps/port9ano2bi':
         return port9ano2bi.layout, 'Português 9 Ano / 2 Bimestre'
+    if pathname == '/apps/mat1ano3bi':
+        return mat1ano3bi.layout, 'Matemática 1 Ano / 3 Bimestre'
+    if pathname == '/apps/mat2ano3bi':
+        return mat2ano3bi.layout, 'Matemática 2 Ano / 3 Bimestre'
+    if pathname == '/apps/mat3ano3bi':
+        return mat3ano3bi.layout, 'Matemática 3 Ano / 3 Bimestre'
+    if pathname == '/apps/mat4ano3bi':
+        return mat4ano3bi.layout, 'Matemática 4 Ano / 3 Bimestre'
+    if pathname == '/apps/mat5ano3bi':
+        return mat5ano3bi.layout, 'Matemática 5 Ano / 3 Bimestre'
+    if pathname == '/apps/mat6ano3bi':
+        return mat6ano3bi.layout, 'Matemática 6 Ano / 3 Bimestre'
+    if pathname == '/apps/mat7ano3bi':
+        return mat7ano3bi.layout, 'Matemática 7 Ano / 3 Bimestre'
+    if pathname == '/apps/mat8ano3bi':
+        return mat8ano3bi.layout, 'Matemática 8 Ano / 3 Bimestre'
+    if pathname == '/apps/mat9ano3bi':
+        return mat9ano3bi.layout, 'Matemática 9 Ano / 3 Bimestre'
+    if pathname == '/apps/port1ano3bi':
+        return port1ano3bi.layout, 'Português 1 Ano / 3 Bimestre'
+    if pathname == '/apps/port2ano3bi':
+        return port2ano3bi.layout, 'Português 2 Ano / 3 Bimestre'
+    if pathname == '/apps/port3ano3bi':
+        return port3ano3bi.layout, 'Português 3 Ano / 3 Bimestre'
+    if pathname == '/apps/port4ano3bi':
+        return port4ano3bi.layout, 'Português 4 Ano / 3 Bimestre'
+    if pathname == '/apps/port5ano3bi':
+        return port5ano3bi.layout, 'Português 5 Ano / 3 Bimestre'
+    if pathname == '/apps/port6ano3bi':
+        return port6ano3bi.layout, 'Português 6 Ano / 3 Bimestre'
+    if pathname == '/apps/port7ano3bi':
+        return port7ano3bi.layout, 'Português 7 Ano / 3 Bimestre'
+    if pathname == '/apps/port8ano3bi':
+        return port8ano3bi.layout, 'Português 8 Ano / 3 Bimestre'
+    if pathname == '/apps/port9ano3bi':
+        return port9ano3bi.layout, 'Português 9 Ano / 3 Bimestre'
     else:
         return mat1ano.layout, 'Matemática 1 Ano / 1 Bimestre'
 
@@ -217,6 +281,16 @@ def toggle_collapse(n, is_open):
     Output("collapse2bi", "is_open"),
     [Input("collapse-button2bi", "n_clicks")],
     [State("collapse2bi", "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("collapse3bi", "is_open"),
+    [Input("collapse-button3bi", "n_clicks")],
+    [State("collapse3bi", "is_open")],
 )
 def toggle_collapse(n, is_open):
     if n:

@@ -314,6 +314,93 @@ EF09MA12= 'Reconhecer as condições necessárias e suficientes para que dois tr
 EF09MA16= 'Determinar o ponto médio de um segmento de reta e a distância entre dois pontos quaisquer, dadas as coordenadas desses pontos no plano cartesiano, sem o uso de fórmulas, e utilizar esse conhecimento para calcular, por exemplo, medidas de perímetros e áreas de figuras planas construídas no plano.'
 EF09MA19= 'Resolver e elaborar problemas que envolvam medidas de volumes de prismas e de cilindros retos, inclusive com uso de expressões de cálculo, em situações cotidianas.'
 EF09MA22= 'Escolher e construir o gráfico mais adequado (colunas, setores, linhas), com ou sem uso de planilhas eletrônicas, para apresentar um determinado conjunto de dados, destacando aspectos como as medidas de tendência central.'
+EF01MA04= 'Contar a quantidade de objetos de  coleções até 100 unidades e apresentar o resultado  por registros verbais e simbólicos, em situações de seu  interesse, como jogos, brincadeiras, materiais da sala  de aula, entre outros'
+EF01MA05= 'Comparar números naturais de até duas  ordens em situações cotidianas, com e sem suporte da  reta numérica.'
+EF01MA06= 'Construir fatos básicos da adição e utilizá los em procedimentos de cálculo para resolver  problemas.'
+EF01MA07= 'Compor e decompor número de até duas  ordens, por meio de diferentes adições, com o suporte  de material manipulável, contribuindo para a  compreensão de características do sistema de  numeração decimal e o desenvolvimento de  estratégias de cálculo.'
+EF01MA08= 'Resolver e elaborar problemas de adição  e de subtração, envolvendo números de até dois  algarismos, com os significados de juntar, acrescentar,  separar e retirar, com o suporte de imagens e/ou  material manipulável, utilizando estratégias e formas  de registro pessoais.'
+EF01MA10= 'Descrever, após o reconhecimento e a  explicitação de um padrão ou regularidade=, os  elementos ausentes em sequências recursivas de  números naturais, objetos ou figuras.'
+EF01MA15= 'Comparar comprimentos, capacidades ou  massas, utilizando termos como mais alto, mais baixo,  mais comprido, mais curto, mais grosso, mais fino,  mais largo, mais pesado, mais leve, cabe mais, cabe  menos, entre outros, para ordenar objetos de uso  cotidiano.'
+EF01MA22= 'Realizar pesquisa, envolvendo até duas  variáveis categóricas de seu interesse e universo de até  30 (trinta) elementos, e organizar dados por meio de  representações pessoais.'
+EF02MA04= 'Compor e decompor números naturais de até  três ordens, com suporte de material manipulável, por meio  de diferentes adições.'
+EF02MA08= 'Resolver e elaborar problemas envolvendo  dobro, metade, triplo e terça parte, com o suporte de  imagens ou material manipulável, utilizando estratégias  pessoais.'
+EF02MA10= 'Descrever um padrão ou regularidade= de  sequências repetitivas e de sequências recursivas, por meio  de palavras, símbolos ou desenhos.'
+EF02MA11= 'Descrever os elementos ausentes em  sequências repetitivas e em sequências recursivas de  números naturais, objetos ou figuras.'
+EF02MA15= 'Reconhecer, comparar e nomear figuras planas  (círculo, quadrado, retângulo e triângulo), por meio de  características comuns, em desenhos apresentados em  diferentes disposições ou em sólidos geométricos.'
+EF03MA05= 'Utilizar diferentes procedimentos de cálculo  mental e escrito para resolver problemas significativos  envolvendo adição e subtração com números naturais.'
+EF03MA06= 'Resolver e elaborar problemas de adição e  subtração com os significados de juntar, acrescentar,  separar, retirar, comparar e completar quantidades,  utilizando diferentes estratégias de cálculo exato ou  aproximado, incluindo cálculo mental.'
+EF03MA08= 'Resolver e elaborar problemas de divisão de um  número natural por outro até 10=, com resto zero e com  resto diferente de zero, com os significados de repartição  equitativa e de medida, por meio de estratégias e registros  pessoais.'
+EF03MA11= 'Compreender a ideia de igualdade para escrever  diferentes sentenças de adições ou de subtrações de dois  números naturais que resultem na mesma soma ou  diferença.'
+EF03MA12= 'Descrever e representar, por meio de esboços  de trajetos ou utilizando croquis e maquetes, a  movimentação de pessoas ou de objetos no espaço,  incluindo mudanças de direção e sentido, com base em  diferentes pontos de referência.'
+EF03MA22= 'Ler e registrar medidas e intervalos de tempo,  utilizando relógios analógico e digital= para informar os  horários de início e término de realização de uma atividade e  sua duração.'
+EF03MA23= 'Ler horas em relógios digitais e em relógios  analógicos e reconhecer a relação entre hora e minutos e  entre minuto e segundos.'
+EF03MA25= 'Identificar, em eventos familiares aleatórios,  todos os resultados possíveis, estimando os que têm maiores  ou menores chances de ocorrência.'
+EF04MA07= 'Resolver e elaborar problemas de divisão cujo  divisor tenha no máximo dois algarismos, envolvendo os  significados de repartição equitativa e de medida, utilizando  estratégias diversas, como cálculo por estimativa, cálculo  mental e algoritmos.'
+EF04MA06= 'Resolver e elaborar problemas envolvendo  diferentes significados da multiplicação (adição de parcelas  iguais, organização retangular e proporcionalidade),  utilizando estratégias diversas, como cálculo por estimativa,  cálculo mental e algoritmos.'
+EF04MA09= 'Reconhecer as frações unitárias mais usuais  (1/2, 1/3, 1/4, 1/5, 1/10 e 1/100) como unidades de medida  menores do que uma unidade, utilizando a reta numérica  como recurso.'
+EF04MA11= 'Identificar regularidades em sequências  numéricas compostas por múltiplos de um número natural.'
+EF04MA19= 'Reconhecer simetria de reflexão em figuras e  em pares de figuras geométricas planas e utilizá-la na  construção de figuras congruentes, com o uso de malhas  quadriculadas e de softwares de geometria.'
+EF04MA23= 'Reconhecer temperatura como grandeza e o  grau Celsius como unidade de medida a ela associada e  utilizá-lo em comparações de temperaturas em diferentes  regiões do Brasil ou no exterior ou, ainda, em discussões que  envolvam problemas relacionados ao aquecimento global.'
+EF04MA24= 'Registrar as temperaturas máxima e mínima  diárias, em locais do seu cotidiano, e elaborar gráficos de  colunas com as variações diárias da temperatura, utilizando,  inclusive, planilhas eletrônicas.'
+EF04MA28= 'Realizar pesquisa envolvendo variáveis  categóricas e numéricas e organizar dados coletados por  meio de tabelas e gráficos de colunas simples ou agrupadas,  com e sem uso de tecnologias digitais.'
+EF05MA07= 'Resolver e elaborar problemas de adição e  subtração com números naturais e com números racionais,  cuja representação decimal seja finita, utilizando estratégias  diversas, como cálculo por estimativa, cálculo mental e  algoritmos.'
+EF05MA09= 'Resolver e elaborar problemas simples de  contagem envolvendo o princípio multiplicativo, como a  determinação do número de agrupamentos possíveis ao se  combinar cada elemento de uma coleção com todos os  elementos de outra coleção, por meio de diagramas de  árvore ou por tabelas.'
+EF05MA12= 'Resolver problemas que envolvam variação de  proporcionalidade direta entre duas grandezas, para associar  a quantidade de um produto ao valor a pagar, alterar as  quantidades de ingredientes de receitas, ampliar ou reduzir  escala em mapas, entre outros.'
+EF05MA13= 'Resolver problemas envolvendo a partilha de  uma quantidade em duas partes desiguais, tais como dividir  uma quantidade em duas partes, de modo que uma seja o  dobro da outra, com compreensão da ideia de razão entre as  partes e delas com o todo.'
+EF05MA16= 'Associar figuras espaciais a suas planificações  (prismas, pirâmides, cilindros e cones) e analisar, nomear e  comparar seus atributos.'
+EF05MA20= 'Concluir, por meio de investigações, que figuras  de perímetros iguais podem ter áreas diferentes e que,  também, figuras que têm a mesma área podem ter  perímetros diferentes.'
+EF05MA22= 'Apresentar todos os possíveis resultados de um  experimento aleatório, estimando se esses resultados são  igualmente prováveis ou não.'
+EF06MA02= 'Reconhecer o sistema de numeração decimal,  como o que prevaleceu no mundo ocidental, e destacar  semelhanças e diferenças com outros sistemas, de modo a  sistematizar suas principais características (base, valor  posicional e função do zero), utilizando, inclusive, a  composição e decomposição de números naturais e números  racionais em sua representação decimal.'
+EF06MA11= 'Resolver e elaborar problemas com números  racionais positivos na representação decimal, envolvendo as  quatro operações fundamentais e a potenciação, por meio de  estratégias diversas, utilizando estimativas e  arredondamentos para verificar a razoabilidade de respostas,  com e sem uso de calculadora.'
+EF06MA15= 'Resolver e elaborar problemas que envolvam a  partilha de uma quantidade em duas partes desiguais,  envolvendo relações aditivas e multiplicativas, bem como a  razão entre as partes e entre uma das partes e o todo.'
+EF06MA17= 'Quantificar e estabelecer relações entre o  número de vértices, faces e arestas de prismas e pirâmides,  em função do seu polígono da base, para resolver problemas  e desenvolver a percepção espacial.'
+EF06MA24= 'Resolver e elaborar problemas que envolvam as  grandezas comprimento, massa, tempo, temperatura, área  (triângulos e retângulos), capacidade e volume (sólidos  formados por blocos retangulares), sem uso de fórmulas,  inseridos, sempre que possível, em contextos oriundos de  situações reais e/ ou relacionadas às outras áreas do  conhecimento'
+EF06MA34= 'Interpretar e desenvolver fluxogramas simples,  identificando as relações entre os objetos representados (por  exemplo, posição de cidades considerando as estradas que as  unem, hierarquia dos funcionários de uma empresa etc.).'
+EF07MA10= 'Comparar e ordenar números racionais em  diferentes contextos e associá-los a pontos da reta  numérica.'
+EF07MA11= 'Compreender e utilizar a multiplicação e a  divisão de números racionais, a relação entre elas e suas  propriedades operatórias.'
+EF07MA12= 'Resolver e elaborar problemas que envolvam  as operações com números racionais.'
+EF07MA18= 'Resolver e elaborar problemas que possam ser  representados por equações polinomiais de 1º grau,  redutíveis à forma ax + b = c, fazendo uso das propriedades  da igualdade.'
+EF07MA24= 'Construir triângulos, usando régua e  compasso, reconhecer a condição de existência do  triângulo quanto à medida dos lados e verificar que a soma  das medidas dos ângulos internos de um triângulo é 180°.'
+EF07MA25= 'Reconhecer a rigidez geométrica dos  triângulos e suas aplicações, como na construção de  estruturas arquitetônicas (telhados, estruturas metálicas e  outras) ou nas artes plásticas.'
+EF07MA26= 'Descrever, por escrito e por meio de um  fluxograma, um algoritmo para a construção de um  triângulo qualquer, conhecidas as medidas dos três lados.'
+EF07MA27= 'Calcular medidas de ângulos internos de  polígonos regulares, sem o uso de fórmulas e estabelecer  relações entre ângulos internos e externos de polígonos,  preferencialmente vinculadas à construção de mosaicos e  de ladrilhamentos.'
+EF07MA28= 'Descrever, por escrito e por meio de um  fluxograma, um algoritmo para a construção de um  polígono regular (como quadrado e triângulo equilátero),  conhecida a medida de seu lado.'
+EF07MA31= 'Estabelecer expressões de cálculo de área de  triângulos e de quadriláteros.'
+EF07MA32= 'Resolver e elaborar problemas de cálculo de  medida de área de figuras planas que podem ser  decompostas por quadrados, retângulos e/ou triângulos,  utilizando a equivalência entre áreas.'
+EF07MA34= 'Planejar e realizar experimentos aleatórios ou  simulações que envolvem cálculo de probabilidades ou  estimativas por meio de frequência de ocorrências.'
+EF08MA07= 'Associar uma equação linear de 1º grau com  duas incógnitas a uma reta no plano cartesiano.'
+EF08MA08= 'Resolver e elaborar problemas relacionados ao  seu contexto próximo, que possam ser representados por  sistemas de equações de 1º grau com duas incógnitas e  interpretá-los, utilizando, inclusive, o plano cartesiano como  recurso.'
+EF08MA17= 'Aplicar os conceitos de mediatriz e bissetriz  como lugares geométricos na resolução de problemas.'
+EF08MA22= 'Calcular a probabilidade de eventos, com base  na construção do espaço amostral, utilizando o princípio  multiplicativo, e reconhecer que a soma das probabilidades  de todos os elementos do espaço amostral é igual a 1(um).'
+EF08MA04= 'Resolver e elaborar problemas, envolvendo cálculo de  porcentagens, incluindo o uso de tecnologias digitais.'
+EF09MA06= 'Compreender as funções como relações de  dependência unívoca entre duas variáveis e suas  representações numérica, algébrica e gráfica e utilizar esse  conceito para analisar situações que envolvam relações  funcionais entre duas variáveis.'
+EF09MA13= 'Demonstrar relações métricas do triângulo  retângulo, entre elas o teorema de Pitágoras, utilizando,  inclusive, a semelhança de triângulos.'
+EF09MA14= 'Resolver e elaborar problemas de aplicação do  teorema de Pitágoras ou das relações de proporcionalidade  envolvendo retas paralelas cortadas por secantes.'
+EF09MA18= 'Reconhecer e empregar unidades usadas para  expressar medidas muito grandes ou muito pequenas, tais  como distância entre planetas e sistemas solares, tamanho  de vírus ou de células, capacidade de armazenamento de  computadores entre outros.'
+EF09MA21= 'Analisar e identificar, em gráficos divulgados  pela mídia, os elementos que podem induzir, às vezes  propositadamente, erros de leitura, como escalas  inapropriadas, legendas não explicitadas corretamente,  omissão de informações importantes (fontes e datas) entre  outros.'
+EF01LP14= 'Identificar outros sinais no texto além das  letras, como pontos finais, de interrogação e exclamação  e seus efeitos na entonação.'
+EF15LP16= 'Ler e compreender, em colaboração com os  colegas e com a ajuda do professor e, mais tarde, de  maneira autônoma, textos narrativos de maior porte  como contos (populares, de fadas, acumulativos, de  assombração etc.) e crônicas.'
+EF12LP15= 'Identificar a forma de composição de  slogans publicitários.'
+EF12LP16= 'Identificar e reproduzir, em anúncios  publicitários e textos de campanhas de conscientização  destinados ao público infantil (orais e escritos, digitais  ou impressos), a formatação e diagramação específica  de cada um desses gêneros, inclusive o uso de imagens. '
+EF15LP18= 'Relacionar texto com ilustrações e outros  recursos gráficos. '
+EF01LP08= 'Relacionar elementos sonoros (sílabas,  fonemas, partes de palavras) com sua representação  escrita. '
+EF01LP11= 'Conhecer, diferenciar e relacionar letras  em formato imprensa e cursiva, maiúsculas e minúsculas.'
+EF12LP17= 'Ler e compreender, em colaboração com os  colegas e com a ajuda do professor, enunciados de  tarefas escolares, diagramas, curiosidades, pequenos  relatos de experimentos, entrevistas, verbetes de  enciclopédia infantil, entre outros gêneros do campo  investigativo, considerando a situação comunicativa e o  tema/assunto do texto.'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
