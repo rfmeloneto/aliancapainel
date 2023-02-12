@@ -24,9 +24,9 @@ layout = html.Div(children=[
     dbc.Row(
             children=[
             dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total3b', style={'font-size':30, 'margin':'auto'})], id='cardtotal3b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA08"),dbc.CardBody(children=[] , id='EF01MA083b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA083b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA13"),dbc.CardBody(children=[] , id='EF01MA133b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA133b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA16"),dbc.CardBody(children=[] , id='EF01MA163b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA163b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA04"),dbc.CardBody(children=[] , id='EF01MA043b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA043b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA05"),dbc.CardBody(children=[] , id='EF01MA053b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA053b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA06"),dbc.CardBody(children=[] , id='EF01MA063b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA063b'),width=3),
             ]
             
     ),
@@ -36,43 +36,13 @@ layout = html.Div(children=[
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF01MA08,
-            target="EF01MA083b",
+            EF01MA04,
+            target="EF01MA043b",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF01MA13,
-            target="EF01MA133b",
-            body=True,
-            trigger="hover"),
-    dbc.Popover(
-            EF01MA16,
-            target="EF01MA163b",
-            body=True,
-            trigger="hover"),
-    
-
-    html.Br(),
-    dbc.Row(
-            children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA21"),dbc.CardBody(children=[] , id='EF01MA213b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA213b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA18"),dbc.CardBody(children=[] , id='EF01MA183b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA183b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA06"),dbc.CardBody(children=[] , id='EF01MA063b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA063b'),width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA03"),dbc.CardBody(children=[] , id='EF01MA033b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA033b'),width=3),
-            ],
-
-
-    ),
-
-
-    dbc.Popover(
-            EF01MA21,
-            target="EF01MA213b",
-            body=True,
-            trigger="hover"),
-    dbc.Popover(
-            EF01MA18,
-            target="EF01MA183b",
+            EF01MA05,
+            target="EF01MA053b",
             body=True,
             trigger="hover"),
     dbc.Popover(
@@ -80,22 +50,52 @@ layout = html.Div(children=[
             target="EF01MA063b",
             body=True,
             trigger="hover"),
+    
+
+    html.Br(),
+    dbc.Row(
+            children=[
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA07"),dbc.CardBody(children=[] , id='EF01MA073b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA073b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA08"),dbc.CardBody(children=[] , id='EF01MA083b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA083b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA15"),dbc.CardBody(children=[] , id='EF01MA153b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA153b'),width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA10"),dbc.CardBody(children=[] , id='EF01MA103b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA103b'),width=3),
+            ],
+
+
+    ),
+
+
     dbc.Popover(
-            EF01MA03,
-            target="EF01MA033b",
+            EF01MA07,
+            target="EF01MA073b",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01MA08,
+            target="EF01MA083b",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01MA15,
+            target="EF01MA153b",
+            body=True,
+            trigger="hover"),
+    dbc.Popover(
+            EF01MA10,
+            target="EF01MA103b",
             body=True,
             trigger="hover"),
 
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA05"),dbc.CardBody(children=[] , id='EF01MA053b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA053b'), width=3),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF01MA22"),dbc.CardBody(children=[] , id='EF01MA223b', style={'font-size':30, 'margin':'auto'})], id='cardEF01MA223b'), width=3),
             ]
     ),
 
     dbc.Popover(
-            EF01MA05,
-            target="EF01MA053b",
+            EF01MA22,
+            target="EF01MA223b",
             body=True,
             trigger="hover"),
 
@@ -144,16 +144,16 @@ def habtotal(escola,turma):
         return str(media), 'danger'
 #----------------------------------------------------------------------
 @app.callback(
-    Output('EF01MA083b','children'),
-    Output('cardEF01MA083b', 'color'),
+    Output('EF01MA043b','children'),
+    Output('cardEF01MA043b', 'color'),
     Input('escola3b','value'),
     Input('drop-down3b','value')
 )
 def hab1(escola,turma):
     dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
     df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA08'].values.sum()
-    qtd = df['EF01MA08'].count()
+    soma = df['EF01MA04'].values.sum()
+    qtd = df['EF01MA04'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -167,16 +167,16 @@ def hab1(escola,turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF01MA133b','children'),
-    Output('cardEF01MA133b', 'color'),
+    Output('EF01MA053b','children'),
+    Output('cardEF01MA053b', 'color'),
     Input('escola3b','value'),
     Input('drop-down3b','value')
 )
 def hab2(escola,turma):
     dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
     df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA13'].values.sum()
-    qtd = df['EF01MA13'].count()
+    soma = df['EF01MA05'].values.sum()
+    qtd = df['EF01MA05'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -186,76 +186,6 @@ def hab2(escola,turma):
         return str(media) , 'warning'
     else:
         return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF01MA163b','children'),
-    Output('cardEF01MA163b', 'color'),
-    Input('escola3b','value'),
-    Input('drop-down3b','value')
-)
-def hab3(escola,turma):
-    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
-    df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA16'].values.sum()
-    qtd = df['EF01MA16'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF01MA213b','children'),
-    Output('cardEF01MA213b', 'color'),
-    Input('escola3b','value'),
-    Input('drop-down3b','value')
-)
-def hab4(escola,turma):
-    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
-    df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA21'].values.sum()
-    qtd = df['EF01MA21'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF01MA183b','children'),
-    Output('cardEF01MA183b', 'color'),
-    Input('escola3b','value'),
-    Input('drop-down3b','value')
-)
-def hab5(escola,turma):
-    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
-    df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA18'].values.sum()
-    qtd = df['EF01MA18'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
 
 #-----------------------------------------------------------------
 
@@ -265,7 +195,7 @@ def hab5(escola,turma):
     Input('escola3b','value'),
     Input('drop-down3b','value')
 )
-def hab6(escola,turma):
+def hab3(escola,turma):
     dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
     df= dff.loc[dff['Turma']==turma]
     soma = df['EF01MA06'].values.sum()
@@ -280,20 +210,42 @@ def hab6(escola,turma):
     else:
         return str(media), 'danger'
 
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF01MA073b','children'),
+    Output('cardEF01MA073b', 'color'),
+    Input('escola3b','value'),
+    Input('drop-down3b','value')
+)
+def hab4(escola,turma):
+    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
+    df= dff.loc[dff['Turma']==turma]
+    soma = df['EF01MA07'].values.sum()
+    qtd = df['EF01MA07'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
 
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF01MA033b','children'),
-    Output('cardEF01MA033b', 'color'),
+    Output('EF01MA083b','children'),
+    Output('cardEF01MA083b', 'color'),
     Input('escola3b','value'),
     Input('drop-down3b','value')
 )
-def hab7(escola,turma):
+def hab5(escola,turma):
     dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
     df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA03'].values.sum()
-    qtd = df['EF01MA03'].count()
+    soma = df['EF01MA08'].values.sum()
+    qtd = df['EF01MA08'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -308,16 +260,64 @@ def hab7(escola,turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF01MA053b','children'),
-    Output('cardEF01MA053b', 'color'),
+    Output('EF01MA153b','children'),
+    Output('cardEF01MA153b', 'color'),
+    Input('escola3b','value'),
+    Input('drop-down3b','value')
+)
+def hab6(escola,turma):
+    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
+    df= dff.loc[dff['Turma']==turma]
+    soma = df['EF01MA15'].values.sum()
+    qtd = df['EF01MA15'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF01MA103b','children'),
+    Output('cardEF01MA103b', 'color'),
+    Input('escola3b','value'),
+    Input('drop-down3b','value')
+)
+def hab7(escola,turma):
+    dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
+    df= dff.loc[dff['Turma']==turma]
+    soma = df['EF01MA10'].values.sum()
+    qtd = df['EF01MA10'].count()
+    media= soma/qtd
+    media = media*100
+    media = int(media)
+    if media >= 50:
+        return str(media), 'success'
+    elif media >= 30 and media < 50 :
+        return str(media) , 'warning'
+    else:
+        return str(media), 'danger'
+
+
+#-----------------------------------------------------------------
+
+@app.callback(
+    Output('EF01MA223b','children'),
+    Output('cardEF01MA223b', 'color'),
     Input('escola3b','value'),
     Input('drop-down3b','value')
 )
 def hab8(escola,turma):
     dff = df_mat1ano3bi.loc[df_mat1ano3bi['Escola']==escola]
     df= dff.loc[dff['Turma']==turma]
-    soma = df['EF01MA05'].values.sum()
-    qtd = df['EF01MA05'].count()
+    soma = df['EF01MA22'].values.sum()
+    qtd = df['EF01MA22'].count()
     media= soma/qtd
     media = media*100
     media = int(media)

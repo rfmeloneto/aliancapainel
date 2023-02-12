@@ -11,114 +11,91 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_mat7ano2bi = pd.read_csv(DATA_PATH.joinpath("mat7ano2bi.csv")) 
-df_habs72bi= df_mat7ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
+df_mat7ano3bi = pd.read_csv(DATA_PATH.joinpath("mat7ano3bi.csv")) 
+df_habs73bi= df_mat7ano3bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
-    dbc.Row(dbc.Col(dcc.Dropdown(df_mat7ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down72bi',), width=2)),
+    dbc.Row(dbc.Col(dcc.Dropdown(df_mat7ano3bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down73bi',), width=2)),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total72bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal72bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA06"),dbc.CardBody(children=[] , id='EF07MA062bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA062bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA23"),dbc.CardBody(children=[] , id='EF07MA232bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA232bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA09"),dbc.CardBody(children=[] , id='EF07MA092bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA092bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total73bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal73bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA10"),dbc.CardBody(children=[] , id='EF07MA103bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA103bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA12"),dbc.CardBody(children=[] , id='EF07MA123bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA123bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA31"),dbc.CardBody(children=[] , id='EF07MA313bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA313bi')),
             ]
     ),
     dbc.Popover(
             totalgeral,
-            target="total72bi",
+            target="total73bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF07MA06,
-            target="EF07MA062bi",
+            EF07MA10,
+            target="EF07MA103bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF07MA23,
-            target="EF07MA232bi",
+            EF07MA12,
+            target="EF07MA123bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF07MA09,
-            target="EF07MA092bi",
+            EF07MA31,
+            target="EF07MA313bi",
             body=True,
             trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA30"),dbc.CardBody(children=[] , id='EF07MA302bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA302bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA05"),dbc.CardBody(children=[] , id='EF07MA052bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA052bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA08"),dbc.CardBody(children=[] , id='EF07MA082bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA082bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA16"),dbc.CardBody(children=[] , id='EF07MA162bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA162bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA18"),dbc.CardBody(children=[] , id='EF07MA183bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA183bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA27"),dbc.CardBody(children=[] , id='EF07MA273bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA273bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA32"),dbc.CardBody(children=[] , id='EF07MA323bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA323bi')),
             ]
     ),
     dbc.Popover(
-            EF07MA30,
-            target="EF07MA302bi",
+            EF07MA18,
+            target="EF07MA183bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF07MA05,
-            target="EF07MA052bi",
+            EF07MA27,
+            target="EF07MA273bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF07MA08,
-            target="EF07MA082bi",
+            EF07MA32,
+            target="EF07MA323bi",
             body=True,
             trigger="hover"),
-    dbc.Popover(
-            EF07MA16,
-            target="EF07MA162bi",
-            body=True,
-            trigger="hover"),
-    html.Br(),
-    dbc.Row(
-            children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA37"),dbc.CardBody(children=[] , id='EF07MA372bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA372bi'), width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF07MA07"),dbc.CardBody(children=[] , id='EF07MA072bi', style={'font-size':30, 'margin':'auto'})], id='cardEF07MA072bi'), width=3),
-            
-            ]
-    ),
-
-    dbc.Popover(
-            EF07MA37,
-            target="EF07MA372bi",
-            body=True,
-            trigger="hover"),
-    dbc.Popover(
-            EF07MA07,
-            target="EF07MA072bi",
-            body=True,
-            trigger="hover"),
+    
+   
     
     html.Br(),
 
     dbc.Row(children=[
 
-    dbc.Col(dcc.Dropdown(df_mat7ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma72bi')),
-    dbc.Col(dcc.Dropdown(df_habs72bi.columns, value="EF07MA07", style ={'margin-top':10, 'margin-left':5}, id='drop-hab72bi')),
+    dbc.Col(dcc.Dropdown(df_mat7ano3bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma73bi')),
+    dbc.Col(dcc.Dropdown(df_habs73bi.columns, value="EF07MA32", style ={'margin-top':10, 'margin-left':5}, id='drop-hab73bi')),
     ]),
 
     html.Br(),
     dbc.Row(children=[
 
-    dbc.Col( dbc.Card(dcc.Graph(id='fighabs72bi',config= {'displaylogo': False}))),
-    dbc.Col( dbc.Card(dcc.Graph(id='figacerto72bi',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs73bi',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto73bi',config= {'displaylogo': False}))),
 ])
 
 ])
 
 @app.callback(
-    Output('total72bi','children'),
-    Output('cardtotal72bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('total73bi','children'),
+    Output('cardtotal73bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def habtotal(turma):
-    df = df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
+    df = df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
     soma = df['Total'].values.sum()
     qtd = df['Total'].count()
     soma=int(soma)
@@ -136,14 +113,14 @@ def habtotal(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA092bi','children'),
-    Output('cardEF07MA092bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA313bi','children'),
+    Output('cardEF07MA313bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab3(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA09'].values.sum()
-    qtd = df['EF07MA09'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA31'].values.sum()
+    qtd = df['EF07MA31'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -157,14 +134,14 @@ def hab3(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA302bi','children'),
-    Output('cardEF07MA302bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA183bi','children'),
+    Output('cardEF07MA183bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab4(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA30'].values.sum()
-    qtd = df['EF07MA30'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA18'].values.sum()
+    qtd = df['EF07MA18'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -178,14 +155,14 @@ def hab4(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA052bi','children'),
-    Output('cardEF07MA052bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA273bi','children'),
+    Output('cardEF07MA273bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab5(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA05'].values.sum()
-    qtd = df['EF07MA05'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA27'].values.sum()
+    qtd = df['EF07MA27'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -200,14 +177,14 @@ def hab5(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA062bi','children'),
-    Output('cardEF07MA062bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA103bi','children'),
+    Output('cardEF07MA103bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab6(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA06'].values.sum()
-    qtd = df['EF07MA06'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA10'].values.sum()
+    qtd = df['EF07MA10'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -226,37 +203,32 @@ def hab6(turma):
 
 #-----------------------------------------------------------------
 
-@app.callback(
-    Output('EF07MA162bi','children'),
-    Output('cardEF07MA162bi', 'color'),
-    Input('drop-down72bi','value')
-)
-def hab8(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA16'].values.sum()
-    qtd = df['EF07MA16'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
+
+
+#-----------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------
+
 
 
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA372bi','children'),
-    Output('cardEF07MA372bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA323bi','children'),
+    Output('cardEF07MA323bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab10(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA37'].values.sum()
-    qtd = df['EF07MA37'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA32'].values.sum()
+    qtd = df['EF07MA32'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -267,64 +239,17 @@ def hab10(turma):
     else:
         return str(media), 'danger'
 
-
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF07MA072bi','children'),
-    Output('cardEF07MA072bi', 'color'),
-    Input('drop-down72bi','value')
+    Output('EF07MA123bi','children'),
+    Output('cardEF07MA123bi', 'color'),
+    Input('drop-down73bi','value')
 )
 def hab10(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA07'].values.sum()
-    qtd = df['EF07MA07'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF07MA082bi','children'),
-    Output('cardEF07MA082bi', 'color'),
-    Input('drop-down72bi','value')
-)
-def hab10(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA08'].values.sum()
-    qtd = df['EF07MA08'].count()
-    media= soma/qtd
-    media = media*100
-    media = int(media)
-    if media >= 50:
-        return str(media), 'success'
-    elif media >= 30 and media < 50 :
-        return str(media) , 'warning'
-    else:
-        return str(media), 'danger'
-
-#-----------------------------------------------------------------
-
-@app.callback(
-    Output('EF07MA232bi','children'),
-    Output('cardEF07MA232bi', 'color'),
-    Input('drop-down72bi','value')
-)
-def hab10(turma):
-    df= df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
-    soma = df['EF07MA23'].values.sum()
-    qtd = df['EF07MA23'].count()
+    df= df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
+    soma = df['EF07MA12'].values.sum()
+    qtd = df['EF07MA12'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -336,12 +261,12 @@ def hab10(turma):
         return str(media), 'danger'
 
 @app.callback(
-    Output('figacerto72bi','figure'),
-    Input('drop-hab72bi','value'),
-    Input('drop-turma72bi','value'),
+    Output('figacerto73bi','figure'),
+    Input('drop-hab73bi','value'),
+    Input('drop-turma73bi','value'),
 )
 def acertos(hab, turma):
-    d = df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
+    d = df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
     dff= d[hab]
     acerto = 0
     erro = 0
@@ -354,11 +279,11 @@ def acertos(hab, turma):
     return fig
 
 @app.callback(
-    Output('fighabs72bi','figure'),
-    Input('drop-turma72bi','value'),
+    Output('fighabs73bi','figure'),
+    Input('drop-turma73bi','value'),
 )
 def habs(turma):
-    df = df_mat7ano2bi.loc[df_mat7ano2bi['Turma']==turma]
+    df = df_mat7ano3bi.loc[df_mat7ano3bi['Turma']==turma]
     fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
     fig.update_layout(showlegend=False)
     fig.update_yaxes( title= 'Quantidade de Estudantes')

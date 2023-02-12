@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output, State
 # Connect to main app.py file
 from app import app, server
 # Connect to your app pages
-from apps import mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano, mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano,port4ano, port5ano, port6ano, port7ano, port8ano, port9ano, mat1ano2bi, mat2ano2bi, mat3ano2bi, mat4ano2bi, mat5ano2bi, mat6ano2bi, mat7ano2bi, mat8ano2bi, mat9ano2bi, port1ano2bi, port2ano2bi, port3ano2bi, port4ano2bi, port5ano2bi, port6ano2bi, port7ano2bi, port8ano2bi, port9ano2bi, mat1ano3bi, mat2ano3bi, mat3ano3bi, mat4ano3bi, mat5ano3bi, mat6ano3bi, mat7ano3bi, mat8ano3bi, mat9ano3bi, port1ano3bi, port2ano3bi, port3ano3bi, port4ano3bi, port5ano3bi, port6ano3bi, port7ano3bi, port8ano3bi, port9ano3bi
+from apps import mat1ano, mat2ano, mat3ano, mat4ano, mat5ano, mat6ano, mat7ano, mat8ano, mat9ano, port1ano, port2ano, port3ano, port4ano, port5ano, port6ano, port7ano, port8ano, port9ano, mat1ano2bi, mat2ano2bi, mat3ano2bi, mat4ano2bi, mat5ano2bi, mat6ano2bi, mat7ano2bi, mat8ano2bi, mat9ano2bi, port1ano2bi, port2ano2bi, port3ano2bi, port4ano2bi, port5ano2bi, port6ano2bi, port7ano2bi, port8ano2bi, port9ano2bi, mat1ano3bi, mat2ano3bi, mat3ano3bi, mat4ano3bi, mat5ano3bi, mat6ano3bi, mat7ano3bi, mat8ano3bi, mat9ano3bi, port1ano3bi, port2ano3bi, port3ano3bi, port4ano3bi, port5ano3bi, port6ano3bi, port7ano3bi, port8ano3bi, port9ano3bi
 
 button = html.Div(children=
     [

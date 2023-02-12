@@ -10,101 +10,81 @@ from dicionario import *
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-df_port5ano2bi = pd.read_csv(DATA_PATH.joinpath("port5ano2bi.csv")) 
-df_habsport52bi = df_port5ano2bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
+df_port5ano3bi = pd.read_csv(DATA_PATH.joinpath("port5ano3bi.csv")) 
+df_habsport53bi = df_port5ano3bi.drop(columns=['Escola','Estudante','Ano','Turma','Total'])
 
 layout = html.Div(children=[
     
-    dbc.Row(dbc.Col(dcc.Dropdown(df_port5ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down152bi',), width=2)),
+    dbc.Row(dbc.Col(dcc.Dropdown(df_port5ano3bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down153bi',), width=2)),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total152bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal152bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF35LP31"),dbc.CardBody(children=[] , id='EF35LP312bi', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP312bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF35LP23"),dbc.CardBody(children=[] , id='EF35LP2322bi', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP2322bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP01"),dbc.CardBody(children=[] , id='EF15LP0122bi', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP0122bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("Domínio Geral das Habilidades"),dbc.CardBody( children=[], id='total153bi', style={'font-size':30, 'margin':'auto'})], id='cardtotal153bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP22"),dbc.CardBody(children=[] , id='EF05LP223bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP223bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP15"),dbc.CardBody(children=[] , id='EF15LP1523bi', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP1523bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP16"),dbc.CardBody(children=[] , id='EF15LP1623bi', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP1623bi')),
             ]
     ),
     dbc.Popover(
             totalgeral,
-            target="total152bi",
+            target="total153bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF35LP31,
-            target="EF35LP312bi",
+            EF05LP22,
+            target="EF05LP223bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF35LP23,
-            target="EF35LP2322bi",
+            EF15LP15,
+            target="EF15LP1523bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF15LP01,
-            target="EF15LP0122bi",
+            EF15LP16,
+            target="EF15LP1623bi",
             body=True,
             trigger="hover"),
     html.Br(),
     dbc.Row(
             children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP15"),dbc.CardBody(children=[] , id='EF05LP152bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP152bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP16"),dbc.CardBody(children=[] , id='EF05LP162bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP162bi')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF15LP17"),dbc.CardBody(children=[] , id='EF15LP172bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF15LP172bi1')),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF35LP27"),dbc.CardBody(children=[] , id='EF35LP272bi', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP272bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP07"),dbc.CardBody(children=[] , id='EF05LP073bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP073bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF35LP14"),dbc.CardBody(children=[] , id='EF35LP143bi', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP143bi')),
+            dbc.Col( dbc.Card([dbc.CardHeader("EF35LP24"),dbc.CardBody(children=[] , id='EF35LP243bi1', style={'font-size':30, 'margin':'auto'})], id='cardEF35LP243bi1')),
             ]
     ),
 
     dbc.Popover(
-            EF05LP15,
-            target="EF05LP152bi",
+            EF05LP07,
+            target="EF05LP073bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF05LP16,
-            target="EF05LP162bi",
+            EF35LP14,
+            target="EF35LP143bi",
             body=True,
             trigger="hover"),
     dbc.Popover(
-            EF15LP17,
-            target="EF15LP172bi1",
+            EF35LP24,
+            target="EF35LP243bi1",
             body=True,
             trigger="hover"),
-    dbc.Popover(
-            EF35LP27,
-            target="EF35LP272bi",
-            body=True,
-            trigger="hover"),
+ 
     html.Br(),
-    dbc.Row(
-            children=[
-            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP03"),dbc.CardBody(children=[] , id='EF05LP032bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP032bi'), width=3),
-            dbc.Col( dbc.Card([dbc.CardHeader("EF05LP01"),dbc.CardBody(children=[] , id='EF05LP0122bi', style={'font-size':30, 'margin':'auto'})], id='cardEF05LP0122bi'), width=3),
-            ]
-    ),
-     dbc.Popover(
-            EF05LP03,
-            target="EF05LP032bi",
-            body=True,
-            trigger="hover"),
-    dbc.Popover(
-            EF05LP01,
-            target="EF05LP0122bi",
-            body=True,
-            trigger="hover"),
+    
             
 dbc.Row(children=[
 
-    dbc.Col(dcc.Dropdown(df_port5ano2bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma142bi')),
-    dbc.Col(dcc.Dropdown(df_habsport52bi.columns, value="EF05LP01", style ={'margin-top':10, 'margin-left':5}, id='drop-hab142bi')),
+    dbc.Col(dcc.Dropdown(df_port5ano3bi['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-turma143bi')),
+    dbc.Col(dcc.Dropdown(df_habsport53bi.columns, value="EF35LP24", style ={'margin-top':10, 'margin-left':5}, id='drop-hab143bi')),
     
 ]),
 
 html.Br(),
 dbc.Row(children=[
 
-    dbc.Col( dbc.Card(dcc.Graph(id='fighabs142bi',config= {'displaylogo': False}))),
-    dbc.Col( dbc.Card(dcc.Graph(id='figacerto142bi',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='fighabs143bi',config= {'displaylogo': False}))),
+    dbc.Col( dbc.Card(dcc.Graph(id='figacerto143bi',config= {'displaylogo': False}))),
 
 
 ]),
@@ -114,12 +94,12 @@ dbc.Row(children=[
 ])
 
 @app.callback(
-    Output('total152bi','children'),
-    Output('cardtotal152bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('total153bi','children'),
+    Output('cardtotal153bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def habtotal(turma):
-    df = df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    df = df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     soma = df['Total'].values.sum()
     qtd = df['Total'].count()
     soma=int(soma)
@@ -133,14 +113,14 @@ def habtotal(turma):
         return str(media), 'danger'
 #----------------------------------------------------------------------
 @app.callback(
-    Output('EF35LP312bi','children'),
-    Output('cardEF35LP312bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF05LP223bi','children'),
+    Output('cardEF05LP223bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab1(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF35LP31'].values.sum()
-    qtd = df['EF35LP31'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF05LP22'].values.sum()
+    qtd = df['EF05LP22'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -154,14 +134,14 @@ def hab1(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF35LP2322bi','children'),
-    Output('cardEF35LP2322bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF15LP1523bi','children'),
+    Output('cardEF15LP1523bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab2(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF35LP23'].values.sum()
-    qtd = df['EF35LP23'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF15LP15'].values.sum()
+    qtd = df['EF15LP15'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -175,12 +155,12 @@ def hab2(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF35LP272bi','children'),
-    Output('cardEF35LP272bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF35LP273bi','children'),
+    Output('cardEF35LP273bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab3(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     soma = df['EF35LP27'].values.sum()
     qtd = df['EF35LP27'].count()
     media= soma/qtd
@@ -196,14 +176,14 @@ def hab3(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF05LP152bi','children'),
-    Output('cardEF05LP152bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF05LP073bi','children'),
+    Output('cardEF05LP073bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab4(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF05LP15'].values.sum()
-    qtd = df['EF05LP15'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF05LP07'].values.sum()
+    qtd = df['EF05LP07'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -217,14 +197,14 @@ def hab4(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF05LP162bi','children'),
-    Output('cardEF05LP162bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF35LP143bi','children'),
+    Output('cardEF35LP143bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab5(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF05LP16'].values.sum()
-    qtd = df['EF05LP16'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF35LP14'].values.sum()
+    qtd = df['EF35LP14'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -239,14 +219,14 @@ def hab5(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF15LP172bi1','children'),
-    Output('cardEF15LP172bi1', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF35LP243bi1','children'),
+    Output('cardEF35LP243bi1', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab6(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF15LP17'].values.sum()
-    qtd = df['EF15LP17'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF35LP24'].values.sum()
+    qtd = df['EF35LP24'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -261,14 +241,14 @@ def hab6(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF15LP0122bi','children'),
-    Output('cardEF15LP0122bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF15LP1623bi','children'),
+    Output('cardEF15LP1623bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab7(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
-    soma = df['EF15LP01'].values.sum()
-    qtd = df['EF15LP01'].count()
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
+    soma = df['EF15LP16'].values.sum()
+    qtd = df['EF15LP16'].count()
     media= soma/qtd
     media = media*100
     media = int(media)
@@ -283,12 +263,12 @@ def hab7(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF05LP032bi','children'),
-    Output('cardEF05LP032bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF05LP033bi','children'),
+    Output('cardEF05LP033bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab8(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     soma = df['EF05LP03'].values.sum()
     qtd = df['EF05LP03'].count()
     media= soma/qtd
@@ -305,12 +285,12 @@ def hab8(turma):
 #-----------------------------------------------------------------
 
 @app.callback(
-    Output('EF05LP0122bi','children'),
-    Output('cardEF05LP0122bi', 'color'),
-    Input('drop-down152bi','value')
+    Output('EF05LP0123bi','children'),
+    Output('cardEF05LP0123bi', 'color'),
+    Input('drop-down153bi','value')
 )
 def hab10(turma):
-    df= df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    df= df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     soma = df['EF05LP01'].values.sum()
     qtd = df['EF05LP01'].count()
     media= soma/qtd
@@ -343,12 +323,12 @@ def hab10(turma):
 
 
 @app.callback(
-    Output('figacerto142bi','figure'),
-    Input('drop-hab142bi','value'),
-    Input('drop-turma142bi','value'),
+    Output('figacerto143bi','figure'),
+    Input('drop-hab143bi','value'),
+    Input('drop-turma143bi','value'),
 )
 def acertos(hab, turma):
-    d = df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    d = df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     dff= d[hab]
     acerto = 0
     erro = 0
@@ -361,11 +341,11 @@ def acertos(hab, turma):
     return fig
 
 @app.callback(
-    Output('fighabs142bi','figure'),
-    Input('drop-turma142bi','value'),
+    Output('fighabs143bi','figure'),
+    Input('drop-turma143bi','value'),
 )
 def habs(turma):
-    df = df_port5ano2bi.loc[df_port5ano2bi['Turma']==turma]
+    df = df_port5ano3bi.loc[df_port5ano3bi['Turma']==turma]
     fig= px.histogram(df, x = 'Total', color='Total', labels= {'Total':'Percentual de Habilidades Desenvolvidas'}, title= 'Percentual de Habilidades Desenvolvidas <br> por Quantidade de Estudante'+' na turma '+str(turma).upper())
     fig.update_layout(showlegend=False)
     fig.update_yaxes( title= 'Quantidade de Estudantes')
