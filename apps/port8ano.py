@@ -17,7 +17,7 @@ df_habsport8 = df_port8ano.drop(columns=['Escola','Estudante','Ano','Turma','Tot
 
 layout = html.Div(children=[
     
-    dbc.Row(dbc.Col(dcc.Dropdown(df_port8ano['Turma'].unique(), value='a', style ={'margin-top':10, 'margin-left':5}, id='drop-down18',), width=2)),
+    dbc.Row(dbc.Col(dcc.Dropdown(df_port8ano['Turma'].unique(), value='u', style ={'margin-top':10, 'margin-left':5}, id='drop-down18',), width=2)),
     html.Br(),
     dbc.Row(
             children=[
